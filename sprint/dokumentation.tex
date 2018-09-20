@@ -1,0 +1,64 @@
+% rubber: set program xelatex
+\documentclass[alpha]{tile-sprint} % Option path/to/src may be required!
+
+\title{Sprint x}
+\subtitle{Dokumentation}
+\author{Max Mustermann, Minni Musterfrau}
+
+% Sprint
+\sprint{Sprint x}
+\sprintstart{dd. Month yyyy}
+\sprintend{dd. Month yyyy}
+
+% Project
+\release{Alpha}
+
+% TILE Article
+\creationname{Max Mustermann} 		% Optional
+\creationdate{dd.mm.yyyy} 			% Optional
+\validationname{Max Mustermann}	% Optional
+\validationdate{dd.mm.yyyy} 		% Optional
+\approvedname{Max Mustermann} 		% Optional
+\approveddate{dd.mm.yyyy}			% Optional
+\version{x.x.x}
+\filepath{presets/sprint/tile-sprint-x-dokumentation.tex}
+
+\begin{document}
+
+\newpage
+\begin{changelog}
+    \addversion{x.x.x}{dd.mm.yyyy}{MUSM}{Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.}
+    \addversion{x.x.x}{dd.mm.yyyy}{MUSM}{Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.}
+\end{changelog}
+
+\section{Vorwort}
+\subsection{Ziel}
+
+ \newpage
+\section{Sprint Backlog}
+\subsection{Übernommen}
+\subsubsection{Übersicht}
+\begin{backlog}
+	\addbacklogitem{xx}{Mustertask 1}{Type}{x.y}{x.y}{x.y}{Bearbeiter}{Status}
+	\addbacklogitem{xx}{Mustertask 2}{Type}{x.y}{x.y}{x.y}{Bearbeiter}{Status}
+	\addbacklogsum{x.y}{x.y}{x.y}
+\end{backlog}
+\subsubsection{TILE-xx Mustertask 1}
+\subsubsection{TILE-xx Mustertask 2}
+
+\subsection{Hinzugefügt}
+\subsubsection{Übersicht}
+\begin{backlog}
+	\addbacklogitem{xx}{Mustertask 3}{Type}{x.y}{x.y}{x.y}{Bearbeiter}{Status}
+	\addbacklogitem{xx}{Mustertask 4}{Type}{x.y}{x.y}{x.y}{Bearbeiter}{Status}
+	\addbacklogsum{x.y}{x.y}{x.y}
+\end{backlog}
+\subsubsection{TILE-xx Mustertask 3}
+\subsubsection{TILE-xx Mustertask 4}
+
+
+\section{Burndown Chart}
+\subsection{Sprint Burndown}
+\subsection{Release Burndown}
+
+\end{document}

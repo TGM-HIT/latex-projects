@@ -1,0 +1,66 @@
+% rubber: set program xelatex
+\documentclass[alpha, signed]{tile-sprint} % Option path/to/src may be required!
+% Document
+\title{Sprint x}
+\subtitle{Abnahme}							% Optional
+\author{Max Mustermann, Minni Musterfrau}
+% Sprint
+\sprint{Sprint x}							% Sprint name
+\sprintstart{dd. Month yyyy}				% Date the sprint started
+\sprintend{dd. Month yyyy}					% Date the sprint ends
+% Project
+\release{Alpha}								% Current product release
+% TILE Article
+\creationname{Max Mustermann} 				% Creator of this document 			- Optional
+\creationdate{dd.mm.yyyy} 					% Date this document was created 	- Optional
+\validationname{Max Mustermann}				% Validator of this document 		- Optional
+\validationdate{dd.mm.yyyy} 				% Date this document was validated	- Optional
+\approvedname{Max Mustermann} 				% Approver of this document			- Optional
+\approveddate{dd.mm.yyyy}					% Date this document was approved	- Optional
+\version{x.x.x}								% Version of this document
+\filepath{presets/sprint/tile-sprint-x-abnahme.pdf}	% Git path to this document
+
+\begin{document}
+\begin{changelog}
+    \addversion{x.x.x}{dd.mm.yyyy}{MUSM}{Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.}
+    \addversion{x.x.x}{dd.mm.yyyy}{MUSM}{Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.}
+\end{changelog}
+
+\newpage
+\section{Ziel}
+\section{Sprint Backlog}
+\subsection{Abgeschlossen}
+\subsubsection{Übernommen}
+\begin{backlog}
+	\addbacklogitem{xx}{Mustertask 1}{Type}{x.y}{x.y}{x.y}{Bearbeiter}{Status}
+	\addbacklogitem{xx}{Mustertask 2}{Type}{x.y}{x.y}{x.y}{Bearbeiter}{Status}
+	\addbacklogsum{x.y}{x.y}{x.y}
+\end{backlog}
+\subsubsection{Hinzugefügt}
+\begin{backlog}
+	\addbacklogitem{xx}{Mustertask 3}{Type}{x.y}{x.y}{x.y}{Bearbeiter}{Status}
+	\addbacklogitem{xx}{Mustertask 4}{Type}{x.y}{x.y}{x.y}{Bearbeiter}{Status}
+	\addbacklogsum{x.y}{x.y}{x.y}
+\end{backlog}
+\subsection{Verschoben}
+\subsubsection{Bearbeitet}
+\begin{backlog}
+	\addbacklogitem{xx}{Mustertask 5}{Type}{x.y}{x.y}{x.y}{Bearbeiter}{Status}
+	\addbacklogitem{xx}{Mustertask 6}{Type}{x.y}{x.y}{x.y}{Bearbeiter}{Status}
+	\addbacklogsum{x.y}{x.y}{x.y}
+\end{backlog}
+
+\newpage
+\section{Kommentare}
+\makecommenttable{20}
+\section{Abnahme}
+Der oben referenzierte Sprint, {\makeatletter\@sprint\makeatother}, gilt mit dem {\makeatletter\@sprintend\makeatother} als beendet und wird hiermit durch den Product Owner abgenommen. \vspace{0.5em} \\
+Offene Elemente des Sprint Backlogs werden damit in den Product Backlog verschoben.
+\\ \vspace{0.5em}
+\begin{center}
+	\rule{0.25 \textwidth}{\headrulewidth} ~\\ \vspace{0.5em}
+	Markus Reichl \\
+	\footnotesize{(Product Owner)}
+\end{center}
+
+\end{document}

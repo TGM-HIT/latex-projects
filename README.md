@@ -7,6 +7,7 @@ Zur Anwendung sind je nach Dokument bestimmte Dateien aus dem Vorlagenverzeichni
 Um die Dokumente zu kompilieren werden XeLaTex und Python 3.4 oder höher benötigt.
 
 Alternativ kann ein Docker Container mit allen Abhängigkeiten der [Dockerfile](https://github.com/TGM-HIT/latex-projects/blob/master/Dockerfile) Datei instanziert werden.
+Um diesen Container zu erstellen, sollte folgendes Kommando ausgeführt werden: `docker build -t latex-tgm/projects:latest -f Dockerfile`. Das Erstellen von Dokumenten ist dann über Docker folgendermaßen auszuführen: `docker run --rm -it --user="$(id -u):$(id -g)" -v $PWD:/data latex-tgm/projects:latest make -C /data "$@"`
 
 **Dokument**
 ``` sh

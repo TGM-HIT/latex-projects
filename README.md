@@ -31,6 +31,17 @@ cd alpha/test
 ../../maketex -xf abnahme dokumentation retro
 ```
 
-Alternativ kann ein Docker Container mit allen Abhängigkeiten der [Dockerfile](https://github.com/TGM-HIT/latex-projects/blob/master/Dockerfile) Datei instanziert werden.
-Um diesen Container zu erstellen, sollte folgendes Kommando ausgeführt werden: `docker build -t latex-tgm/projects:latest .`. Das Erstellen von Dokumenten ist dann über Docker folgendermaßen auszuführen: `docker run --rm -it --user="$(id -u):$(id -g)" -v $PWD:/data latex-tgm/projects:latest bash -c "cd data && maketex -xf article"` oder einfach mit dem bereitgestellten Shell-Script im jeweiligen Verzeichnis: `../../rundocker.sh -xf article`.
+### Docker
+Alternativ kann ein Docker Container mit allen Abhängigkeiten der [Dockerfile](https://github.com/TGM-HIT/latex-projects/blob/master/Dockerfile) Datei instanziert werden.  
+
+Um diesen Container zu erstellen, sollte folgendes Kommando ausgeführt werden:
+```sh
+docker build -t latex-tgm/projects:latest .
+```
+
+Das Erstellen von Dokumenten ist über Docker mit folgendem Befehl möglich: `docker run --rm -it --user="$(id -u):$(id -g)" -v $PWD:/data latex-tgm/projects:latest bash -c "cd data && maketex -xf article"` bzw. einfach mit dem bereitgestellten Shell-Script im jeweiligen Verzeichnis:
+```sh
+cd docs/test
+../../rundocker.sh -xf article
+```
 

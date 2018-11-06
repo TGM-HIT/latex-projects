@@ -6,32 +6,31 @@ LaTeX templates for project documentation and scrum artifacts.
 Zur Anwendung sind je nach Dokument bestimmte Dateien aus dem Vorlagenverzeichnis zu kopieren.
 Um die Dokumente zu kompilieren werden XeLaTex und Python 3.4 oder höher benötigt.
 
-Alternativ kann ein Docker Container mit allen Abhängigkeiten der [Dockerfile](https://github.com/TGM-HIT/latex-projects/blob/master/Dockerfile) Datei instanziert werden.
-Um diesen Container zu erstellen, sollte folgendes Kommando ausgeführt werden: `docker build -t latex-tgm/projects:latest -f Dockerfile`. Das Erstellen von Dokumenten ist dann über Docker folgendermaßen auszuführen: `docker run --rm -it --user="$(id -u):$(id -g)" -v $PWD:/data latex-tgm/projects:latest make -C /data "$@"`
-
 **Dokument**
 ``` sh
-mkdir -p docs/test && cd docs/test  # Verzeichnis des neuen Dokuments
-cp ../../templates/*article* .      # Kopieren der Vorlagen
-cp ../../templates/make .           # Kopieren der Anwendung zur Kompilierung
+mkdir -p docs/test                          # Verzeichnis des neuen Dokuments
+cp templates/article/*article* docs/test/.  # Kopieren der Vorlagen
 ```
 
 Zusätzlich können auch Bibliographie- und Glossareinträge früherer Dokumente hinzugefügt werden.
 ``` sh
-cp ../../templates/bib.bib . && cp ../../templates/glo.tex .
+cp templates/article/bib.bib docs/test/. && cp templates/article/glo.tex docs/test/.
 ```
 
-Kompiliert wird ein Dokument über die Anwendung `make`.
+Kompiliert wird ein Dokument über die Anwendung `maketex`.
 ``` sh
-./make -xf article.tex
+cd docs/test
+../../maketex -xf article
 ```
 
 **Artefakt**
 ``` sh
-mkdir -p alpha/test && cd alpha/test
-cp ../../templates/tile-article.cls .
-cp ../../templates/make .
-cp ../../templates/sprint/* .
-
-./make -xf abnahme dokumentation retro
+mkdir -p alpha/test
+cp -r templates/sprint/* alpha/test/.
+cd alpha/test
+../../maketex -xf abnahme dokumentation retro
 ```
+
+Alternativ kann ein Docker Container mit allen Abhängigkeiten der [Dockerfile](https://github.com/TGM-HIT/latex-projects/blob/master/Dockerfile) Datei instanziert werden.
+Um diesen Container zu erstellen, sollte folgendes Kommando ausgeführt werden: `docker build -t latex-tgm/projects:latest .`. Das Erstellen von Dokumenten ist dann über Docker folgendermaßen auszuführen: `docker run --rm -it --user="$(id -u):$(id -g)" -v $PWD:/data latex-tgm/projects:latest bash -c "cd data && maketex -xf article"` oder einfach mit dem bereitgestellten Shell-Script im jeweiligen Verzeichnis: `../../rundocker.sh -xf article`.
+

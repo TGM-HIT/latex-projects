@@ -77,6 +77,9 @@
 \DeclareOption{alpha}{\renewcommand{\statuscolor}[1]{\textcolor{Red}{#1}}}
 \DeclareOption{beta}{\renewcommand{\statuscolor}[1]{\textcolor{Orange}{#1}}}
 \DeclareOption{release}{\renewcommand{\statuscolor}[1]{\textcolor{Green}{#1}}}
+% == Fonts
+\newif\iffonts\fontstrue
+\DeclareOption{nofonts}{\fontsfalse}
 % == Bibliography
 \newif\ifnobib
 \nobibfalse
@@ -149,39 +152,18 @@
 \SetupFloatingEnvironment{listing}{name=Source Code}
 
 % = Fonts
-% == Oswald
-\newfontfamily\oswald[
-    Ligatures = TeX,
-    Path = ../../fonts/Oswald/,
-    Extension = .ttf,
-    UprightFont = *-Regular,
-    BoldFont = *-Bold,
-    % ItalicFont = *-Italic
-]{Oswald}
-% == Inconsolata
-\newfontfamily\inconsolata[
-    Ligatures = TeX,
-    Path = ../../fonts/Inconsolata/,
-    Extension = .ttf,
-    UprightFont = *-Regular,
-    BoldFont = *-Bold,
-    % ItalicFont = *-Italic
-]{Inconsolata}
-% == Lato
-\setmainfont[
-    Ligatures = TeX,
-    Path = ../../fonts/Lato/,
-    Extension = .ttf,
-    UprightFont = *-Light,
-    BoldFont = *-Bold,
-    ItalicFont = *-Italic
-]{Lato}
+\iffonts        % Load correct fonts when available
+    \IfFileExists{raleway.sty}{\RequirePackage{raleway}}{}
+    \IfFileExists{lato.sty}{\RequirePackage{lato}}{}
+    \IfFileExists{inconsolata.sty}{\RequirePackage{inconsolata}}{}
+\fi
 % == Section fonts
-\titleformat*{\section}{\LARGE\oswald}
-\titleformat*{\subsection}{\Large\oswald}
-\titleformat*{\subsubsection}{\large\oswald}
-\titleformat*{\paragraph}{\large\oswald}
-\titleformat*{\subparagraph}{\large\oswald}
+% https://tex.stackexchange.com/questions/27843/level-of-boldness-changeable
+\titleformat*{\section}{\fontseries{bx}\LARGE\raleway}
+\titleformat*{\subsection}{\fontseries{bx}\Large\raleway}
+\titleformat*{\subsubsection}{\fontseries{bx}\large\raleway}
+\titleformat*{\paragraph}{\fontseries{bx}\large\raleway}
+\titleformat*{\subparagraph}{\fontseries{bx}\large\raleway}
 
 % = Makros
 % == Signatures
@@ -319,7 +301,7 @@
     \begin{center}
         \let \footnote \thanks
         \begin{center}
-            \oswald
+            \fontseries{bx}\raleway
             \LARGE TileHub\\\vspace{0.5 em}
             \ifthenelse{\equal{\@release}{\@empty}}{}{\Large{\@release}\vspace{1 em}~\\}
             \Huge
@@ -373,5 +355,5 @@
 
 % another layer of sectioning (using Paragraphs)
 % \setcounter{secnumdepth}{4}
-\titleformat{\paragraph}{\large\oswald}{\theparagraph}{1em}{}
+\titleformat{\paragraph}{\large\raleway}{\theparagraph}{1em}{}
 \titlespacing*{\paragraph}{0em}{1em}{0.5em}

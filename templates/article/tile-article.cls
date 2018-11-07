@@ -128,6 +128,7 @@
 % == Subsubtitle
 \newcommand\@subsubtitle{}
 \newcommand\subsubtitle[1]{\renewcommand\@subsubtitle{#1}}
+\newif\ifsans\sansfalse                 % Sans-serif fonts
 
 % = Settings
 % == Tabularx
@@ -153,9 +154,11 @@
 
 % = Fonts
 \iffonts        % Load correct fonts when available
-    \IfFileExists{raleway.sty}{\RequirePackage{raleway}}{}
-    \IfFileExists{lato.sty}{\RequirePackage{lato}}{}
+    % \IfFileExists{lato.sty}{\RequirePackage{lato}}{}
+    \ifsans \renewcommand*\familydefault{\sfdefault}
+    \else   \IfFileExists{crimson.sty}{\RequirePackage{crimson}}{}\fi
     \IfFileExists{inconsolata.sty}{\RequirePackage{inconsolata}}{}
+    \IfFileExists{raleway.sty}{\RequirePackage{raleway}}{}
 \fi
 % == Section fonts
 % https://tex.stackexchange.com/questions/27843/level-of-boldness-changeable

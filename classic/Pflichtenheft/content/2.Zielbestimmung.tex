@@ -1,0 +1,105 @@
+\section{Zielbestimmung}
+Es werden die Funktionen des Produktes in Muss- oder Wunschkriterien unterteilt, welche vom Produkte entweder erfüllt werden müssen oder können. Außerdem werden Abgrenzungeskriterien des Produkts beschrieben.
+\subsection{Musskriterien}
+Die folgenden Kriterien, muss das Produkt erfüllen, um das Projekt abzuschließen. Dabei werden dass anhand dessen Funktion beschrieben und mit können durch ihre LF Nummer auf ein detailliertere Beschreibung referenziert werden. Diese befassen sich grundsätzlich mit der Erstellung und der Publizierung der Desktop-Version des Produktes
+\begin{indentE}\mbox{}
+	\paragraph{Desktop}\mbox{}\\
+	Die folgenden Kriterien beziehen sich auf die Desktop-Version, welche vom Produkt erfüllt werden müssen.
+	\paragraph{/LF1110/ Verbindung aufbauen}\mbox{}\\
+	Es wird die Verbindung mit dem ausgewählten Empfänger aufgebaut. Dieser Verbindungsaufbau besteht aus einem verschlüsselten Handshake, mit welchem die Systemdaten des Empfängers und Senders ausgetauscht werden. Wenn Empfänger und Sender den selben Verschlüsselungsschlüssel gewählt haben, ist der Handshake erfolgreich und der Transfer kann beginnen.
+	\paragraph{/LF1120/ Daten transferieren}\mbox{}\\
+	Die Daten werden in kleinen Paketen versandt, um die Datensicherheit zu garantieren. Dabei haben diese eine einheitliche Größe und es werden unterschiedliche viele je nach Datengröße versandt. Dabei sollen der Empfänger und der Sender um den Fortschritt der Übertragung aufgeklärt werden.
+	\paragraph{/LF1140/ Datentransfer verschlüsseln}\mbox{}\\
+	Der Datentransfer wird mit einem Verschlüsselungsschlüssel verschlüsselt, um die Datensicherheit zu erhöhen. Diese wird dann vom Empfänger wieder entschlüsselt. Die dafür benutzte Verschlüsselungsart, kann vom Auftraggeber ausgewählt werden.
+	\paragraph{/LF1210/ Datei auswählen}\mbox{}\\
+	Der Benutzer wählt eine Datei aus, welche er verschicken möchte. Hierbei soll eine voreilige Kalkulation durchgeführt werden, welche die Dauer der Übertragung schätzt.
+	\paragraph{/LF1220/ Empfänger auswählen}\mbox{}\\
+	Es werden dem Benutzer die möglichen Empfänger angezeigt und ausgwählt oder er kann den Namen des Empfängers eingeben, um den Empfänger zu bestimmen.
+	\paragraph{/LF1230/ Verschlüsselungsschlüssel eingeben}\mbox{}\\
+	Wenn kein Standard-Schlüssel ausgewählt ist, muss der Sender diesen bevor dem Verbindungsaufbau eingeben. Dieser muss dann dem Empfänger mitgeteilt werden und dieser muss den selben auch eingeben, um den Datentransfer zu ermöglichen.
+	\paragraph{/LF1240/ Datei speichern}\mbox{}\\
+	Der Empfänger soll nach dem empfangen der Datei auswählen können, ob diese im Standard-Speicherort gespeichert wird, oder in einem besonderen. Wenn der Besondere ausgewählt worden ist, soll ihm ein Benutzerinterface gezeigt werden, indem er den Speicherort auswählen.
+	\paragraph{/LF1270/ Desktopinterace implementieren}\mbox{}\\
+	Das Desktopinterface muss nach der Bestätigung des Auftraggeber implementiert werden. 
+	\paragraph{/LF1280/ Frontend und Backend verbinden}\mbox{}\\
+	Es muss eine Verbindung zwischen dem Frontend und Backend erstellt werden, welche die Aufforderungen verarbeitet und zum Backend weiterleitet. Diese Verbindung, soll dem Benutzer entweder mitteilen, wie lange die Verarbeitung noch dauert oder bei
+	\paragraph{Publizierung}\mbox{}\\
+	Die folgenden Kriterien beziehen sich auf die Publizierung des Produktes, welche vom Produkt erfüllt werden müssen.
+	\paragraph{/LF3110/ Website erstellen}\mbox{}\\
+	Es wird eine Webseite erstellt, auf welche das Produkt vorgestellt wird. Außerdem soll diese dem Besucher das Projektteam und den Auftraggeber näher bringen, auf einer eigenen About-Seite. Diese Webseite wird dann auf einen Hosting-Provider hochgeladen, von wo sie mit einer Domain aufgerufen werden kann.
+	\paragraph{/LF3120/ Produkt auf Webseite veröffentlichen}\mbox{}\\
+	Das Produkt muss auf ihrer eigenen Webseite /LF2060/ publiziert werden. Diese besitzt eine eigne Seite für den Download der Software. Dort kann man die App und Desktop Version für 5€ kaufen und die Desktop Version einzeln für 3€.
+\end{indentE}
+\subsection{Wunschkriterien}
+Die Kriterien sind für das Produkt erwünscht und können je nach Abschluss für Prämien vom Auftraggeber sorgen. Diese Prämien werden mit dem Auftraggeber in einem Meeting ausgemacht. Diese befassen sich hauptsächlich mit der App-Version. Welche nicht im Endprodukt vorhanden sein muss um dieses zu liefern.
+\begin{indentE}\mbox{}
+	\paragraph{Desktop}\mbox{}\\
+	Die folgenden Kriterien beziehen sich auf die Desktop-Version, welche diese erfüllen kann, aber nicht muss.
+	\paragraph{/LF1130/ Daten komprimieren}\mbox{}\\
+	Die Daten werden vor dem Versand verlustlos komprimiert, um die Datenmenge zu verkleinern. Die dabei gewählt Komprimierungsart, darf vom Auftragnehmer ausgewählt werden.
+	\paragraph{/LF1150/ Benutzereinstellungen integrieren}\mbox{}\\
+	Die vom Benutzer ausgewählten Benutzereinstellungen müssen in das Backend integrierte werden, um den Nutzen aus diesen Werten zu ziehen.
+	\paragraph{/LF1250/ Benutzereinstellungen hinzufügen}\mbox{}\\
+	Der Benutzer kann einige Fix-Einstellungen auf seinem Produkt tätigen. Darunter zählt die Möglichkeit, den Namen zu ändern, welcher den restlichen Nutzern angezeigt wird, die Verschlüsselung zu aktivieren oder deaktivieren, einen Standardschlüssel auszuwählen und einen Standard-Speicherort auszuwählen. Dabei sollen die eingegebenen Daten auf ihre Korrektheit überprüft werden.
+	\paragraph{/LF1260/ Desktopinterface designen}\mbox{}\\
+	Es muss ein Interface für den Desktop entworfen werden. Dazu gehören Mockups und Prototypen. Diese müssen vor deren Implementierung vom Auftraggeber bestätigt werden.
+	\paragraph{App-Version}\mbox{}\\
+	Die folgenden Kriterien beziehen sich auf die App-Version. Diese müssen alle im Endprodukt nicht verpflichtend vorhanden sein. Werden aber bei vorhanden seien extra entlohnt.
+	\paragraph{/LF2110/ Verbindung aufbauen}\mbox{}\\
+	Es wird die Verbindung mit dem ausgewählten Empfänger aufgebaut. Dieser Verbindungsaufbau besteht aus einem verschlüsselten Handshake, mit welche die Systemdaten des Empfängers und Senders ausgetauscht werden. Wenn Empfänger und Sender den selben Verschlüsselungsschlüssel gewählt haben, sit der Handshake erfolgreich und der Transfer kann beginnen.
+	\paragraph{/LF2130/ Daten transferieren}\mbox{}\\
+	Die Daten werden in kleinen Paketen versandt, um die Datensicherheit zu garantieren. Dabei haben diese eine einheitliche Größe und es werden unterschiedliche viele je nach Datengröße versandt. Dabei sollen der Empfänger und der Sender um den Fortschritt der Übertragung aufgeklärt werden.
+	\paragraph{/LF2140/ Daten komprimieren}\mbox{}\\
+	Die Daten werden vor dem Versand verlustlos komprimiert, um die Datenmenge zu verkleinern. Die dabei gewählt Komprimierungsart, darf vom Auftragnehmer ausgewählt werden.
+	\paragraph{/LF2150/ Datentransfer verschlüsseln}\mbox{}\\
+	Der Datentransfer wird mit einem Verschlüsselungsschlüssel verschlüsselt, um die Datensicherheit zu erhöhen. Diese wird dann vom Empfänger wieder entschlüsselt. Die dafür benutzte Verschlüsselungsart, kann vom Auftraggeber ausgewählt werden.
+	\paragraph{/LF2160/ Benutzereinstellungen integrieren}\mbox{}\\
+	Die vom Benutzer ausgewählten Benutzereinstellungen müssen in das Backend integrierte werden, um den Nutzen aus diesen Werten zu ziehen.
+	\paragraph{/LF2110/ Verbindung aufbauen}\mbox{}\\
+	Es wird die Verbindung mit dem ausgewählten Empfänger aufgebaut. Dieser Verbindungsaufbau besteht aus einem verschlüsselten Handshake, mit welche die Systemdaten des Empfängers und Senders ausgetauscht werden. Wenn Empfänger und Sender den selben Verschlüsselungsschlüssel gewählt haben, sit der Handshake erfolgreich und der Transfer kann beginnen.
+	\paragraph{/LF2130/ Daten transferieren}\mbox{}\\
+	Die Daten werden in kleinen Paketen versandt, um die Datensicherheit zu garantieren. Dabei haben diese eine einheitliche Größe und es werden unterschiedliche viele je nach Datengröße versandt. Dabei sollen der Empfänger und der Sender um den Fortschritt der Übertragung aufgeklärt werden.
+	\paragraph{/LF2140/ Daten komprimieren}\mbox{}\\
+	Die Daten werden vor dem Versand verlustlos komprimiert, um die Datenmenge zu verkleinern. Die dabei gewählt Komprimierungsart, darf vom Auftragnehmer ausgewählt werden.
+	\paragraph{/LF2150/ Datentransfer verschlüsseln}\mbox{}\\
+	Der Datentransfer wird mit einem Verschlüsselungsschlüssel verschlüsselt, um die Datensicherheit zu erhöhen. Diese wird dann vom Empfänger wieder entschlüsselt. Die dafür benutzte Verschlüsselungsart, kann vom Auftraggeber ausgewählt werden.
+	\paragraph{/LF2160/ Benutzereinstellungen integrieren}\mbox{}\\
+	Die vom Benutzer ausgewählten Benutzereinstellungen müssen in das Backend integrierte werden, um den Nutzen aus diesen Werten zu ziehen.
+	\paragraph{/LF2210/ Datei auswählen}\mbox{}\\
+	Der Benutzer wählt eine Datei aus, welche er verschicken möchte. Hierbei soll eine voreilige Kalkulation durchgeführt werden, welche die Dauer der Übertragung schätzt.
+	\paragraph{/LF2220/ Empfänger auswählen}\mbox{}\\
+	Es werden dem Benutzer die möglichen Empfänger angezeigt und ausgwählt oder er kann den Namen des Empfängers eingeben, um den Empfänger zu bestimmen.
+	\paragraph{/LF2230/ Verschlüsselungsschlüssel eingeben}\mbox{}\\
+	Wenn kein Standard-Schlüssel ausgewählt ist, muss der Sender diesen bevor dem Verbindungsaufbau eingeben. Dieser muss dann dem Empfänger mitgeteilt werden und dieser muss den selben auch eingeben, um den Datentransfer zu ermöglichen.
+	\paragraph{/LF2240/ Datei speichern}\mbox{}\\
+	Der Empfänger soll nach dem empfangen der Datei auswählen können, ob diese im Standard-Speicherort gespeichert wird, oder in einem besonderen. Wenn der Besondere ausgewählt worden ist, soll ihm ein Benutzerinterface gezeigt werden, indem er den Speicherort auswählen.
+	\paragraph{/LF2250/ Benutzereinstellungen hinzufügen}\mbox{}\\
+	Der Benutzer kann einige Fix-Einstellungen auf seinem Produkt tätigen. Darunter zählt die Möglichkeit, den Namen zu ändern, welche de restlichen Nutzern angezeigt wird, die Verschlüsselung zu aktivieren oder deaktivieren, einen Standardschlüssel auszuwählen und einen Standard-Speicherort auszuwählen. Dabei sollen die eingegebenen Daten auf ihre Korrektheit überprüft werden.
+	\paragraph{/LF2260/ Appinterface designen}\mbox{}\\
+	Es muss ein Interface für das Smartphone entworfen werden. Dazu gehören Mockups und Prototypen. Diese müssen vor deren Implementierung vom Auftraggeber bestätigt werden.
+	\paragraph{/LF2270/ Appinterface implementieren}\mbox{}\\
+	Das Appinterface muss nach der Bestätigung des Auftraggeber implementiert werden. 
+	\paragraph{/LF2280/ Frontend und Backend verbinden}\mbox{}\\
+	Es muss ein Verbindung zwischen dem Frontend und Backend erstellt werden, welche die Aufforderungen verarbeitet und zum Backend weiterleitet. Diese Verbindung, soll dem Benutzer entweder mitteilen, wie lange die Verarbeitung noch dauert oder bei kürzeren das wiederholte Aufrufen von Aufforderungen verhindern.
+	\paragraph{Publizierung}\mbox{}\\
+	Die folgenden Kriterien beziehen sich auf die Publizierung, welche nicht erfüllt werden müssen. Bei den Wunschkriterien wird außerdem ein großer Bezug auf die App gesetzt und die Desktop-Version ist von den Folgenden nicht betroffen.
+	\paragraph{/LF3210/ Produkt auf Play Store veröffentlichen}\mbox{}\\
+	Die Android App soll auf dem Google Play Store hochgeladen werden und dort für eine Preis von 3€ verkauft werden. Dafür muss ein Google Developer Account erstellt werden, um diese hochzuladen.
+	\paragraph{/LF3220/ Produkt auf App Store veröffentlichen}\mbox{}\\
+	Die iOS App kann auf dem Apple App Store hochgeladen werden und dort für 3€ verkauft werden.
+\end{indentE}\\
+\subsection{Abgrenzungskriterien}
+Diese Kriterien müssen vom Endprodukt nicht erfüllt werden, und sind deshalb vom Auftraggeber weder wünschbar noch einforderbar.
+\begin{indentE}\mbox{}
+	\paragraph{One-Way Transfer}\mbox{}\\
+	Es wird vom Auftragnehmer nicht dafür garantiert, das der One-Way Transfer zwischen zwei Geräten erfolgreich funktioniert.
+	\paragraph{Dateiinteraktion}\mbox{}\\
+	Die Datei ist nach dem empfangen nicht durch die App selbst änderbar. Dazu gehören das ändern des Namens, aber auch die Einsicht und Bearbeitung des Datei Inhaltes.
+	\paragraph{Werbung anzeigen}\mbox{}\\
+	Es ist nicht Möglich in dem Produkt Werbung anzuzeigen und die einzige Möglichkeit mit diesen etwas zu erwirtschaften, ist der erfolgreiche Verkauf des Produktes.
+	\paragraph{Webseite hosten}\mbox{}\\
+	Die Kosten des Hosten der Webseite werden nicht vom Auftragnehmer bereitgestellt. Außerdem muss die Webseite selbst vom Auftraggeber in Inbetriebnahme gesetzt werden.
+	\paragraph{Sicherheitstest}\mbox{}\\
+	Es werden vom Auftragnehmer keine Sicherheitstests vorgenommen oder externe dafür beauftragt diese Durchzuführen. Es wird zwar Acht darauf genommen die Sicherheit des Produktes zu erhöhen, aber nicht weiterführend getestet.
+	\paragraph{}\mbox{}\\
+\end{indentE}

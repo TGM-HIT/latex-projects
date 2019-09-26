@@ -1,0 +1,62 @@
+\usepackage{xparse}
+
+\ExplSyntaxOn
+\NewDocumentCommand{\NewWeirdCommand}{mm}
+{% #1 = command to define, #2 = replacement text
+	\cs_new:Npn #1 ##1
+	{
+		\tl_set:Nn \l__simon_args_tl { ##1 }
+		#2
+	}
+}
+\NewDocumentCommand{\Arg}{m}
+{
+	\tl_item:Nn \l__simon_args_tl { #1 }
+}
+
+\tl_new:N \l__simon_parse_args_tl
+\ExplSyntaxOff
+
+\NewWeirdCommand{\UseCase}{\\\\
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabularx}{\linewidth}{|l|X|}
+				\hline
+				\multicolumn{2}{|c|}{\multirow{2}{*}{\large\textbf{\Arg{2}}}}\\
+				\multicolumn{2}{|c|}{} \\
+				\hline
+				\multicolumn{2}{|l|}{\multirow{2}{*}{\large\textbf{UseCase}}}\\
+				\multicolumn{2}{|l|}{} \\
+				\hline\textbf{Art}&
+				\Arg{1}\\
+				%\rowcolor{LBlue}
+				\hline\textbf{Beschreibung}&
+				\Arg{4}\\
+				\hline\textbf{Auslöser}&
+				\Arg{5}\\
+				%\rowcolor{LBlue} 
+				\hline\textbf{Ergebnis}&
+				\Arg{6}\\
+				\hline\textbf{Akteure}&
+				\Arg{7}\\
+				%\rowcolor{LBlue}
+				\hline\textbf{Informationen}&
+				\Arg{8}\\
+				\hline\textbf{Vorbedingungen}&
+				\Arg{9}\\
+				%\rowcolor{LBlue}
+				\hline\textbf{Nachbedingung}&
+				\Arg{10}\\
+				\hline\textbf{Nutzen}&
+				\Arg{11}\\
+				%\rowcolor{LBlue}
+				\hline\textbf{Aufwand}&
+				\Arg{12}\\
+				\hline\textbf{Priorität}& 
+				\Arg{13}\\
+				\hline
+			\end{tabularx}
+		\end{center}
+	\end{table}
+	\newpage
+}

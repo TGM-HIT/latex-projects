@@ -1,0 +1,103 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{mwe}
+\usepackage{changepage}
+\usepackage[margin=100pt]{geometry}
+\usepackage{tabularx}
+\usepackage{color, colortbl}
+\usepackage{multirow}
+\usepackage{lmodern, textcomp}
+\usepackage{fancyhdr}
+\usepackage{lscape}
+\usepackage{verbatim}
+\usepackage{tikz}
+\usepackage[usestackEOL]{stackengine}
+\author{Georg Felber, Markus Mondl, Florian Ritter, Luca Wenzl}
+
+\newenvironment{indentE}{\begin{adjustwidth}{0.5cm}{}}{\end{adjustwidth}}
+
+\input{templates/useCase}
+
+\pagestyle{fancy}
+\lhead{Pflichtenheft Phobos-Wireless}
+\rhead{Team Phobos}
+\lfoot{\hline \mbox{}\\ V1}
+\cfoot{}
+\rfoot{\hline \mbox{} \\ \thepage}
+
+\title{Pflichtenheft Phobos-Wireless}
+\begin{document}
+	\maketitle
+	\thispagestyle{empty}
+	\tikz[remember picture,overlay]
+	\node[anchor=north east,inner sep=10pt] at (current page.north east)
+	{\includegraphics[height=3cm]{pictures/logo/logo.jpg}};
+	\mbox{}\\
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabularx} {\linewidth}{|l|c|c|l|c|X|}
+				\hline
+				\textbf{V} & 
+				\textbf{Autor} &
+				\textbf{QS} & 
+				\textbf{Datum} & 
+				\textbf{Status} & 
+				\textbf{Kommentar}\\\hline
+				0.1 & gfelber & fritter & 22.3.2019 & Entwurf & Zielbestimmungen hinzugefügt\\
+				\hline
+				0.2 & gfelber & fritter & 23.3.2019 & Überarbeitet & Produktfunktionen hinzugefügt\\
+				\hline
+				0.2 & gfelber & fritter & 24.3.2019 & Überarbeitet & Produktleistungen hinzugefügt\\
+				\hline
+				0.3 & gfelber & fritter & 25.3.2019 &Überarbeitet & Qualitätsbestimmungen \& Sonstiges hinzugefügt\\
+				\hline
+				0.4 & mmondl & fritter & 25.3.2019 & Überarbeitet & Produkteinsatz hinzugefügt\\
+				\hline
+				0.5 & mmondl & fritter & 26.3.2019 & Überarbeitet & Vertragsgegenstand hinzugefügt\\
+				\hline
+				0.6 & gfelber & fritter & 26.3.2019 & Überarbeitet & Sonstiges hinzugefügt\\
+				\hline
+				1 & gfelber & ZAKS & 28.3.2019 & Überarbeitet & Sonstiges hinzugefügt\\
+				\hline
+			\end{tabularx}
+		\end{center}
+	\end{table}
+	\newpage
+	\tableofcontents
+	\newpage
+	\input{content/1.Einleitung} %Markus
+	\newpage
+	\input{content/2.Zielbestimmung} %Georg
+	\newpage
+	\input{content/3.Produkteinsatz} %Markus
+	\newpage
+	\input{content/4.Produktumgebung} %Florian
+	\newpage
+	\input{content/5.Produktfunktionen} %Georg & Luca
+	\newpage
+	\input{content/6.Produktdaten} %Florian	
+	\newpage
+	\input{content/7.Produktleistungen} %Georg 
+	\newpage
+	\input{content/8.Benutzungsschnittstelle} %Markus
+	\newpage
+	\input{content/9.Qualitaetsbestimmung} %Georg
+	\newpage
+	\input{content/10.Globale_Testfaelle} %Markus & Luca
+	\newpage
+	\input{content/11.Entwicklungsumgebung} %Florian
+	\newpage
+	\input{content/12.Termine} %Markus
+	\newpage
+	\input{content/13.Vertragsgegenstand} %Markus
+	\newpage
+	\input{content/14.Sonstiges} %Georg
+	\newpage
+	\input{content/15.Glossar} %Florian
+\end{document}

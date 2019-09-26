@@ -1,0 +1,179 @@
+\select@language {german}
+\contentsline {section}{\numberline {1}Einleitung}{4}
+\contentsline {section}{\numberline {2}Zielbestimmung}{5}
+\contentsline {subsection}{\numberline {2.1}Musskriterien}{5}
+\contentsline {paragraph}{Desktop}{5}
+\contentsline {paragraph}{/LF1110/ Verbindung aufbauen}{5}
+\contentsline {paragraph}{/LF1120/ Daten transferieren}{5}
+\contentsline {paragraph}{/LF1140/ Datentransfer verschl\IeC {\"u}sseln}{5}
+\contentsline {paragraph}{/LF1210/ Datei ausw\IeC {\"a}hlen}{5}
+\contentsline {paragraph}{/LF1220/ Empf\IeC {\"a}nger ausw\IeC {\"a}hlen}{5}
+\contentsline {paragraph}{/LF1230/ Verschl\IeC {\"u}sselungsschl\IeC {\"u}ssel eingeben}{6}
+\contentsline {paragraph}{/LF1240/ Datei speichern}{6}
+\contentsline {paragraph}{/LF1270/ Desktopinterace implementieren}{6}
+\contentsline {paragraph}{/LF1280/ Frontend und Backend verbinden}{6}
+\contentsline {paragraph}{Publizierung}{6}
+\contentsline {paragraph}{/LF3110/ Website erstellen}{6}
+\contentsline {paragraph}{/LF3120/ Produkt auf Webseite ver\IeC {\"o}ffentlichen}{6}
+\contentsline {subsection}{\numberline {2.2}Wunschkriterien}{6}
+\contentsline {paragraph}{Desktop}{7}
+\contentsline {paragraph}{/LF1130/ Daten komprimieren}{7}
+\contentsline {paragraph}{/LF1150/ Benutzereinstellungen integrieren}{7}
+\contentsline {paragraph}{/LF1250/ Benutzereinstellungen hinzuf\IeC {\"u}gen}{7}
+\contentsline {paragraph}{/LF1260/ Desktopinterface designen}{7}
+\contentsline {paragraph}{App-Version}{7}
+\contentsline {paragraph}{/LF2110/ Verbindung aufbauen}{7}
+\contentsline {paragraph}{/LF2130/ Daten transferieren}{7}
+\contentsline {paragraph}{/LF2140/ Daten komprimieren}{7}
+\contentsline {paragraph}{/LF2150/ Datentransfer verschl\IeC {\"u}sseln}{8}
+\contentsline {paragraph}{/LF2160/ Benutzereinstellungen integrieren}{8}
+\contentsline {paragraph}{/LF2110/ Verbindung aufbauen}{8}
+\contentsline {paragraph}{/LF2130/ Daten transferieren}{8}
+\contentsline {paragraph}{/LF2140/ Daten komprimieren}{8}
+\contentsline {paragraph}{/LF2150/ Datentransfer verschl\IeC {\"u}sseln}{8}
+\contentsline {paragraph}{/LF2160/ Benutzereinstellungen integrieren}{8}
+\contentsline {paragraph}{/LF2210/ Datei ausw\IeC {\"a}hlen}{8}
+\contentsline {paragraph}{/LF2220/ Empf\IeC {\"a}nger ausw\IeC {\"a}hlen}{8}
+\contentsline {paragraph}{/LF2230/ Verschl\IeC {\"u}sselungsschl\IeC {\"u}ssel eingeben}{9}
+\contentsline {paragraph}{/LF2240/ Datei speichern}{9}
+\contentsline {paragraph}{/LF2250/ Benutzereinstellungen hinzuf\IeC {\"u}gen}{9}
+\contentsline {paragraph}{/LF2260/ Appinterface designen}{9}
+\contentsline {paragraph}{/LF2270/ Appinterface implementieren}{9}
+\contentsline {paragraph}{/LF2280/ Frontend und Backend verbinden}{9}
+\contentsline {paragraph}{Publizierung}{9}
+\contentsline {paragraph}{/LF3210/ Produkt auf Play Store ver\IeC {\"o}ffentlichen}{9}
+\contentsline {paragraph}{/LF3220/ Produkt auf App Store ver\IeC {\"o}ffentlichen}{10}
+\contentsline {subsection}{\numberline {2.3}Abgrenzungskriterien}{10}
+\contentsline {paragraph}{One-Way Transfer}{10}
+\contentsline {paragraph}{Dateiinteraktion}{10}
+\contentsline {paragraph}{Werbung anzeigen}{10}
+\contentsline {paragraph}{Webseite hosten}{10}
+\contentsline {paragraph}{Sicherheitstest}{10}
+\contentsline {paragraph}{}{10}
+\contentsline {section}{\numberline {3}Produkteinsatz}{11}
+\contentsline {subsection}{\numberline {3.1}Desktop Applikation}{11}
+\contentsline {subsection}{\numberline {3.2}Smartphone Applikation}{11}
+\contentsline {subsection}{\numberline {3.3}Webportal}{11}
+\contentsline {section}{\numberline {4}Produktumgebung}{13}
+\contentsline {subsection}{\numberline {4.1}Software}{13}
+\contentsline {subsection}{\numberline {4.2}Hardware}{13}
+\contentsline {subsection}{\numberline {4.3}Orgware}{13}
+\contentsline {subsection}{\numberline {4.4}Produkt-Schnittstelle}{13}
+\contentsline {section}{\numberline {5}Produktfunktionen}{14}
+\contentsline {subsection}{\numberline {5.1}Desktop-Version}{15}
+\contentsline {subsubsection}{\numberline {5.1.1}Backend erstellen}{15}
+\contentsline {paragraph}{Aktivit\IeC {\"a}tsdiagramm Backend}{15}
+\contentsline {paragraph}{/LF1110/ Verbindung aufbauen}{16}
+\contentsline {paragraph}{/LF1120/ Daten transferieren}{17}
+\contentsline {paragraph}{/LF1130/ Daten komprimieren}{18}
+\contentsline {paragraph}{/LF1140/ Datentransfer verschl\IeC {\"u}sseln}{19}
+\contentsline {paragraph}{/LF1150/ Benutzereinstellungen integrieren}{20}
+\contentsline {subsubsection}{\numberline {5.1.2}Frontend erstellen}{21}
+\contentsline {paragraph}{Aktivit\IeC {\"a}tsdiagramm Frontend}{21}
+\contentsline {paragraph}{/LF1210/ Datei ausw\IeC {\"a}hlen}{22}
+\contentsline {paragraph}{/LF1220/ Empf\IeC {\"a}nger ausw\IeC {\"a}hlen}{23}
+\contentsline {paragraph}{/LF1230/ Verschl\IeC {\"u}sselungsschl\IeC {\"u}ssel eingeben}{24}
+\contentsline {paragraph}{/LF1240/ Datei speichern}{25}
+\contentsline {paragraph}{/LF1250/ Benutzereinstellungen hinzuf\IeC {\"u}gen}{26}
+\contentsline {paragraph}{/LF1260/ Desktopinterface designen}{27}
+\contentsline {paragraph}{/LF1270/ Desktopinterace implementieren}{28}
+\contentsline {paragraph}{/LF1280/ Frontend und Backend verbinden}{29}
+\contentsline {subsection}{\numberline {5.2}App}{30}
+\contentsline {subsubsection}{\numberline {5.2.1}Backend erstellen}{30}
+\contentsline {paragraph}{Aktivit\IeC {\"a}tsdiagramm Backend}{30}
+\contentsline {paragraph}{/LF2110/ Verbindung aufbauen}{31}
+\contentsline {paragraph}{/LF2120/ Daten transferieren}{32}
+\contentsline {paragraph}{/LF2130/ Daten komprimieren}{33}
+\contentsline {paragraph}{/LF2140/ Datentransfer verschl\IeC {\"u}sseln}{34}
+\contentsline {paragraph}{/LF2150/ Benutzereinstellungen integrieren}{35}
+\contentsline {subsubsection}{\numberline {5.2.2}Frontend erstellen}{36}
+\contentsline {paragraph}{Aktivit\IeC {\"a}tsdiagramm Frontend}{36}
+\contentsline {paragraph}{/LF2210/ Datei ausw\IeC {\"a}hlen}{37}
+\contentsline {paragraph}{/LF2220/ Empf\IeC {\"a}nger ausw\IeC {\"a}hlen}{38}
+\contentsline {paragraph}{/LF2230/ Verschl\IeC {\"u}sselungsschl\IeC {\"u}ssel eingeben}{39}
+\contentsline {paragraph}{/LF2240/ Datei speichern}{40}
+\contentsline {paragraph}{/LF2250/ Benutzereinstellungen hinzuf\IeC {\"u}gen}{41}
+\contentsline {paragraph}{/LF2260/ Appinterface designen}{42}
+\contentsline {paragraph}{/LF2270/ Appinterface implementieren}{43}
+\contentsline {paragraph}{/LF2280/ Frontend und Backend verbinden}{44}
+\contentsline {subsection}{\numberline {5.3}Publizierung}{45}
+\contentsline {paragraph}{Aktivit\IeC {\"a}tsdiagramm Publizierung}{45}
+\contentsline {paragraph}{/LF3110/ Website erstellen}{46}
+\contentsline {paragraph}{/LF3120/ Produkt auf Webseite ver\IeC {\"o}ffentlichen}{47}
+\contentsline {paragraph}{/LF3210/ Produkt auf Play Store ver\IeC {\"o}ffentlichen}{48}
+\contentsline {paragraph}{/LF3220/ Produkt auf App Store ver\IeC {\"o}ffentlichen}{49}
+\contentsline {section}{\numberline {6}Produktdaten}{50}
+\contentsline {subsection}{\numberline {6.1}/LD1000/ Systemdaten}{51}
+\contentsline {subsection}{\numberline {6.2}/LD2000/ Datei}{51}
+\contentsline {subsection}{\numberline {6.3}/LD3000/ Transferdaten}{51}
+\contentsline {subsection}{\numberline {6.4}/LD4000/ Benutzereinstellungen}{51}
+\contentsline {section}{\numberline {7}Produktleistungen}{52}
+\contentsline {paragraph}{/L1010/ Produktgr\IeC {\"o}\IeC {\ss }e}{52}
+\contentsline {paragraph}{/L1020/ Empf\IeC {\"a}nger anzeigen}{52}
+\contentsline {paragraph}{/L1030/ Verbindungsaufbauzeit}{52}
+\contentsline {paragraph}{/L1040/ Daten\IeC {\"u}bertragungsrate}{52}
+\contentsline {paragraph}{/L1050/ Dateigr\IeC {\"o}\IeC {\ss }e}{52}
+\contentsline {paragraph}{/L2110/ Windows kompatibel}{52}
+\contentsline {paragraph}{/L2120/ Debian kompatibel}{52}
+\contentsline {section}{\numberline {8}Benutzungsschnittstellen}{53}
+\contentsline {subsection}{\numberline {8.1}Desktop}{53}
+\contentsline {subsubsection}{\numberline {8.1.1}Home Screen}{53}
+\contentsline {subsubsection}{\numberline {8.1.2}Verschl\IeC {\"u}sselungskey eingeben}{54}
+\contentsline {subsubsection}{\numberline {8.1.3}Empf\IeC {\"a}nger ausw\IeC {\"a}hlen}{55}
+\contentsline {subsubsection}{\numberline {8.1.4}Fortschrittsbalken anzeigen}{56}
+\contentsline {subsubsection}{\numberline {8.1.5}Optionen anzeigen}{57}
+\contentsline {subsubsection}{\numberline {8.1.6}Einstellungen anzeigen}{58}
+\contentsline {subsubsection}{\numberline {8.1.7}Nachrichten}{59}
+\contentsline {subsubsection}{\numberline {8.1.8}Nachricht akzeptieren}{60}
+\contentsline {subsection}{\numberline {8.2}Smartphone}{60}
+\contentsline {subsubsection}{\numberline {8.2.1}Home Screen}{61}
+\contentsline {subsubsection}{\numberline {8.2.2}Verschl\IeC {\"u}sselungskey eingeben}{62}
+\contentsline {subsubsection}{\numberline {8.2.3}Empf\IeC {\"a}nger ausw\IeC {\"a}hlen}{63}
+\contentsline {subsubsection}{\numberline {8.2.4}Fortschrittsbalken anzeigen}{64}
+\contentsline {subsubsection}{\numberline {8.2.5}Optionen anzeigen}{65}
+\contentsline {subsubsection}{\numberline {8.2.6}Einstellungen anzeigen}{66}
+\contentsline {subsubsection}{\numberline {8.2.7}Nachrichten}{67}
+\contentsline {subsubsection}{\numberline {8.2.8}Nachricht akzeptieren}{68}
+\contentsline {section}{\numberline {9}Qualit\IeC {\"a}tsbestimmung}{69}
+\contentsline {paragraph}{Funktionalit\IeC {\"a}t}{69}
+\contentsline {paragraph}{Angemessenheit}{69}
+\contentsline {paragraph}{Richtigkeit}{69}
+\contentsline {paragraph}{Interoperabilit\IeC {\"a}t}{69}
+\contentsline {paragraph}{Ordnungsgem\IeC {\"a}\IeC {\ss }}{69}
+\contentsline {paragraph}{Sicherheit}{69}
+\contentsline {paragraph}{Zuverl\IeC {\"a}ssigkeit}{70}
+\contentsline {paragraph}{Reife}{70}
+\contentsline {paragraph}{Fehlertoleranz}{70}
+\contentsline {paragraph}{Wiederherstellbarkeit}{70}
+\contentsline {paragraph}{Benutzbarkeit}{70}
+\contentsline {paragraph}{Verst\IeC {\"a}ndlichkeit}{70}
+\contentsline {paragraph}{Erlernbarkeit}{70}
+\contentsline {paragraph}{Bedienbarkeit}{70}
+\contentsline {paragraph}{Effizienz}{70}
+\contentsline {paragraph}{Zeitverhalten}{70}
+\contentsline {paragraph}{Verbrauchsverhalten}{70}
+\contentsline {paragraph}{\IeC {\"A}nderbarkeit}{70}
+\contentsline {paragraph}{Stabilit\IeC {\"a}t}{70}
+\contentsline {section}{\numberline {10}Globale Testf\IeC {\"a}lle}{71}
+\contentsline {paragraph}{Akteure}{71}
+\contentsline {paragraph}{Datentransfer}{72}
+\contentsline {paragraph}{Datei ausw\IeC {\"a}hlen}{73}
+\contentsline {paragraph}{Verbindung aufbauen}{74}
+\contentsline {paragraph}{Daten senden}{75}
+\contentsline {paragraph}{Datei speichern}{76}
+\contentsline {section}{\numberline {11}Entwicklungsumgebung}{77}
+\contentsline {subsection}{\numberline {11.1}Software}{77}
+\contentsline {subsection}{\numberline {11.2}Hardware}{77}
+\contentsline {subsection}{\numberline {11.3}Orgware}{77}
+\contentsline {subsection}{\numberline {11.4}Entwicklungsschnittstellen}{77}
+\contentsline {section}{\numberline {12}Termine}{78}
+\contentsline {subsection}{\numberline {12.1}Meilensteintermine}{78}
+\contentsline {subsection}{\numberline {12.2}Teillieferungen}{78}
+\contentsline {section}{\numberline {13}Vertragsgegenstand}{79}
+\contentsline {subsection}{\numberline {13.1}Lieferumfang}{79}
+\contentsline {subsection}{\numberline {13.2}Produktbezogene Leistungen}{79}
+\contentsline {section}{\numberline {14}Sonstiges}{80}
+\contentsline {paragraph}{Desktop vs. App}{80}
+\contentsline {paragraph}{Webseite aufsetzen}{80}
+\contentsline {paragraph}{Bugfixes}{80}
+\contentsline {section}{\numberline {15}Glossar}{81}

@@ -1,0 +1,87 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{mwe}
+\usepackage{changepage}
+\usepackage[margin=100pt]{geometry}
+\usepackage{tabularx}
+\usepackage{color, colortbl}
+\usepackage{multirow}
+\usepackage{lmodern, textcomp}
+\usepackage{fancyhdr}
+\usepackage{lscape}
+\author{Georg Felber, Markus Mondl, Florian Ritter, Luca Wenzl}
+
+\newenvironment{indentE}{\begin{adjustwidth}{0.5cm}{}}{\end{adjustwidth}}
+
+\pagestyle{fancy}
+\lhead{Lastenheft Phobos-Wireless}
+\rhead{Team Phobos}
+\lfoot{V2}
+\cfoot{}
+\rfoot{\thepage}
+
+\title{Lastenheft Phobos-Wireless}
+\begin{document}
+	\maketitle
+	\mbox{}\\
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabularx} {\linewidth}{|l|c|c|l|c|X|}
+				\hline
+				\textbf{V} & 
+				\textbf{Autor} &
+				\textbf{QS} & 
+				\textbf{Datum} & 
+				\textbf{Status} & 
+				\textbf{Kommentar} \\
+				\hline
+				0.1 & mmondl & gfelber & 14.Februar 2019 & Entwurf & Einführung und Zielbestimmung\\
+				\hline
+				0.2 & gfelber & fritter & 16.Februar 2019 & Überarbeitet & Lastenfunktionen\\
+				\hline
+				0.3 & gfelber & lwenzl & 17.Februar 2019 & Überarbeitet & Produktdaten\\
+				\hline
+				0.4 & gfelber & mmondl & 18.Februar 2019 & Überarbeitet & Randbedingungen und Qualitätsanforderungen\\
+				\hline
+				0.5 & mmondl & gfelber & 18.Februar 2019 & Überarbeitet & Vertragsgegenstand\\
+				\hline
+				0.6 & gfelber & fritter & 19.Februar 2019 & Überarbeitet & Lastenfunktionen\\
+				\hline
+				0.7 & mmondl & gfelber & 19.Februar 2019 & Überarbeitet & Einführung und Produkteinsatz\\
+				\hline
+				1.0 & gfelber & ZAKS & 19.Februar 2019 & Endversion &\\
+				\hline
+				1.1 & gfelber & fritter & 19.Februar 2019 & Überarbeitet & Dokument unstrukturiert\\
+				\hline
+				1.2 & fritter & gfelber & 20.Februar 2019 & Überarbeitet & Glossar hinzugefügt\\
+				\hline
+				1.3 & gfelber & fritter & 21.Februar 2019 & Überarbeitet & Feedback eingebaut\\
+				\hline
+				1.4 & mondl & gfelber & 27.Februar 2019 & Überarbeitet & Feedback eingebaut\\
+				\hline
+				2.0 & gfelber & fritter & 27.Februar 2019 & Endversion &\\
+				\hline
+			\end{tabularx}
+		\end{center}
+	\end{table}
+	\newpage
+	\tableofcontents
+	\newpage
+	\input{content/1.Einfuehrung}					%Markus
+	\input{content/2.Zielbestimmung}				%Markus
+	\input{content/3.Produkteinsatz}				%Markus
+	\input{content/4.Produktfunktionen}				%Georg
+	\input{content/5.Produktdaten}					%Georg
+	\input{content/6.Randbedingungen}				%Georg
+	\input{content/7.Vertragsgegenstand}			%Markus
+	\newpage
+	\input{content/8.Qualitaetsanforderungen}		%Georg
+	\input{content/9.Ergaenzungen}					%Markus
+	\input{content/10.Glossar}
+\end{document}

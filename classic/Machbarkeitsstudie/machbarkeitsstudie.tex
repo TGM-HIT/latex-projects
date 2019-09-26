@@ -1,0 +1,88 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{mwe}
+\usepackage{changepage}
+\usepackage[margin=100pt]{geometry}
+\usepackage{tabularx}
+\usepackage{color, colortbl}
+\usepackage{multirow}
+\usepackage{lmodern, textcomp}
+\usepackage{fancyhdr}
+\usepackage{lscape}
+\usepackage{verbatim}
+\usepackage{tikz}
+\author{Georg Felber, Markus Mondl, Florian Ritter, Luca Wenzl}
+
+\newenvironment{indentE}{\begin{adjustwidth}{0.5cm}{}}{\end{adjustwidth}}
+
+\input{templates/useCase}
+
+\pagestyle{fancy}
+\lhead{Machbarkeitsstudie Phobos-Wireless}
+\rhead{Team Phobos}
+\lfoot{\hline \mbox{}\\ V1}
+\cfoot{}
+\rfoot{\hline \mbox{} \\ \thepage}
+
+\title{Machbarkeitsstudie Phobos-Wireless}
+\begin{document}
+	\maketitle
+	\thispagestyle{empty}
+	\tikz[remember picture,overlay]
+	\node[anchor=north east,inner sep=10pt] at (current page.north east)
+	{\includegraphics[height=3cm]{pictures/logo/logo.jpg}};
+	\mbox{}\\
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabularx} {\linewidth}{|l|c|c|l|c|X|}
+				\hline
+				\textbf{V} & 
+				\textbf{Autor} &
+				\textbf{QS} & 
+				\textbf{Datum} & 
+				\textbf{Status} & 
+				\textbf{Kommentar} \\
+				\hline
+				\multirow{2}{*}{0.1} & mmondl & \multirow{2}{*}{fritter} & \multirow{2}{*}{6.3.2019} & \multirow{2}{*}{Entwurf} & Analyse angefangen\\
+				& gfelber & & & & Produktfunktionen
+				angefangen\\
+				\hline
+				0.2 & gfelber & fritter & 13.3.2019 & Überarbeitet & Produktfunktionen\\
+				\hline
+				0.3 & mmondl & fritter & 14.3.2019 & Überarbeitet & Analyse verbessert, Zustände angefangen\\
+				\hline
+				0.4 & mmondl & fritter & 17.3.2019 & Überarbeitet & Zustände bearbeitet\\
+				\hline
+				0.5 & mmondl & fritter & 22.3.2019 & Überarbeitet & Risikoanalyse verbessert, Management Summary\\
+				\hline
+				0.6 & fritter & gfelber & 25.03.2019 & Überarbeitet & Technische Machbarkeit, Glossar\\
+				\hline
+				0.7 & fritter & gfelber & 25.03.2019 & Überarbeitet & Nutzwertanalyse\\
+				\hline
+				1.0 & gfelber & ZAKS & 26.03.2019 &  & Endversion\\
+				\hline
+			\end{tabularx}
+		\end{center}
+	\end{table}
+	\end
+	\newpage
+	\tableofcontents
+	\newpage
+	\input{content/1.Einleitung}			% Markus
+	\input{content/2.Ist-Zustand}			% Markus
+	\input{content/3.Analyse}				% Markus
+	\input{content/4.Soll-Zustand}			% Markus
+ 	\input{content/5.Produktfuntkionen}		% Georg
+	\input{content/6.Machbarkeit}			% Florian & Markus
+	\input{content/7.Nutzwertanalyse}		% Florian
+	\input{content/8.Projektorganisation}	% Markus
+	\input{content/9.Projektplanung}		% Markus
+	\input{content/10.Summary}				% Markus, Georg, Florian
+	\input{content/11.Glossar}				% Florian
+\end{document}

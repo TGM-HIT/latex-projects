@@ -1,0 +1,81 @@
+\select@language {german}
+\contentsline {section}{\numberline {1}Einleitung}{3}
+\contentsline {section}{\numberline {2}Ist-Zustand}{3}
+\contentsline {section}{\numberline {3}Trendanalyse}{4}
+\contentsline {section}{\numberline {4}Soll-Zustand}{4}
+\contentsline {section}{\numberline {5}Produktfunktionen}{5}
+\contentsline {subsection}{\numberline {5.1}Desktop-Version}{6}
+\contentsline {subsubsection}{\numberline {5.1.1}Backend erstellen}{6}
+\contentsline {paragraph}{Aktivit\IeC {\"a}tsdiagramm Backend}{6}
+\contentsline {paragraph}{/LF1110/ Verbindung aufbauen}{7}
+\contentsline {paragraph}{/LF1120/ Daten transferieren}{8}
+\contentsline {paragraph}{/LF1130/ Daten komprimieren}{9}
+\contentsline {paragraph}{/LF1140/ Datentransfer verschl\IeC {\"u}sseln}{10}
+\contentsline {paragraph}{/LF1150/ Benutzereinstellungen integrieren}{11}
+\contentsline {subsubsection}{\numberline {5.1.2}Frontend erstellen}{12}
+\contentsline {paragraph}{Aktivit\IeC {\"a}tsdiagramm Frontend}{12}
+\contentsline {paragraph}{/LF1210/ Datei ausw\IeC {\"a}hlen}{13}
+\contentsline {paragraph}{/LF1220/ Empf\IeC {\"a}nger ausw\IeC {\"a}hlen}{14}
+\contentsline {paragraph}{/LF1230/ Verschl\IeC {\"u}sselungsschl\IeC {\"u}ssel eingeben}{15}
+\contentsline {paragraph}{/LF1240/ Datei speichern}{16}
+\contentsline {paragraph}{/LF1250/ Benutzereinstellungen hinzuf\IeC {\"u}gen}{17}
+\contentsline {paragraph}{/LF1260/ Desktopinterface designen}{18}
+\contentsline {paragraph}{/LF1270/ Desktopinterace implementieren}{19}
+\contentsline {paragraph}{/LF1280/ Frontend und Backend verbinden}{20}
+\contentsline {subsection}{\numberline {5.2}App-Version}{21}
+\contentsline {subsubsection}{\numberline {5.2.1}Backend erstellen}{21}
+\contentsline {paragraph}{Aktivit\IeC {\"a}tsdiagramm Backend}{21}
+\contentsline {paragraph}{/LF2110/ Verbindung aufbauen}{22}
+\contentsline {paragraph}{/LF2120/ Daten transferieren}{23}
+\contentsline {paragraph}{/LF2130/ Daten komprimieren}{24}
+\contentsline {paragraph}{/LF2140/ Datentransfer verschl\IeC {\"u}sseln}{25}
+\contentsline {paragraph}{/LF2150/ Benutzereinstellungen integrieren}{26}
+\contentsline {subsubsection}{\numberline {5.2.2}Frontend erstellen}{27}
+\contentsline {paragraph}{Aktivit\IeC {\"a}tsdiagramm Frontend}{27}
+\contentsline {paragraph}{/LF2210/ Datei ausw\IeC {\"a}hlen}{28}
+\contentsline {paragraph}{/LF2220/ Empf\IeC {\"a}nger ausw\IeC {\"a}hlen}{29}
+\contentsline {paragraph}{/LF2230/ Verschl\IeC {\"u}sselungsschl\IeC {\"u}ssel eingeben}{30}
+\contentsline {paragraph}{/LF2240/ Datei speichern}{31}
+\contentsline {paragraph}{/LF2250/ Benutzereinstellungen hinzuf\IeC {\"u}gen}{32}
+\contentsline {paragraph}{/LF2260/ Appinterface designen}{33}
+\contentsline {paragraph}{/LF2270/ Appinterface implementieren}{34}
+\contentsline {paragraph}{/LF2280/ Frontend und Backend verbinden}{35}
+\contentsline {subsection}{\numberline {5.3}Publizierung}{36}
+\contentsline {paragraph}{Aktivit\IeC {\"a}tsdiagramm Publizierung}{36}
+\contentsline {paragraph}{/LF3110/ Website erstellen}{37}
+\contentsline {paragraph}{/LF3120/ Produkt auf Webseite ver\IeC {\"o}ffentlichen}{38}
+\contentsline {paragraph}{/LF3210/ Produkt auf Play Store ver\IeC {\"o}ffentlichen}{39}
+\contentsline {paragraph}{/LF3220/ Produkt auf App Store ver\IeC {\"o}ffentlichen}{40}
+\contentsline {section}{\numberline {6}Machbarkeit}{41}
+\contentsline {subsection}{\numberline {6.1}Technische Machbarkeit}{41}
+\contentsline {subsubsection}{\numberline {6.1.1}Programmiersprache}{41}
+\contentsline {subsubsection}{\numberline {6.1.2}Verschl\IeC {\"u}sselung}{41}
+\contentsline {paragraph}{AES256}{41}
+\contentsline {paragraph}{Benutzerdefiniert}{41}
+\contentsline {paragraph}{Kodierung}{41}
+\contentsline {paragraph}{Nutzwertanalyse}{41}
+\contentsline {subsubsection}{\numberline {6.1.3}Datentransfer}{42}
+\contentsline {paragraph}{WLAN}{42}
+\contentsline {paragraph}{BlueTooth}{42}
+\contentsline {paragraph}{Nutzwertanalyse}{42}
+\contentsline {subsubsection}{\numberline {6.1.4}Kompression}{43}
+\contentsline {paragraph}{Verlustfreie Kompression}{43}
+\contentsline {paragraph}{Verlustbehaftete Kompression}{43}
+\contentsline {paragraph}{Nutzwertanalyse}{43}
+\contentsline {subsection}{\numberline {6.2}Wirtschaftliche Machbarkeit}{43}
+\contentsline {subsubsection}{\numberline {6.2.1}Personalaufwand}{43}
+\contentsline {subsubsection}{\numberline {6.2.2}Risikoanalyse}{45}
+\contentsline {paragraph}{Qualit\IeC {\"a}t}{48}
+\contentsline {paragraph}{0}{48}
+\contentsline {paragraph}{1}{48}
+\contentsline {paragraph}{2}{48}
+\contentsline {paragraph}{3}{48}
+\contentsline {paragraph}{4}{48}
+\contentsline {section}{\numberline {7}Nutzwertanalyse}{49}
+\contentsline {section}{\numberline {8}Projektorganisation}{50}
+\contentsline {section}{\numberline {9}Projektplanung}{51}
+\contentsline {subsection}{\numberline {9.1}Projektstrukturplan}{51}
+\contentsline {subsection}{\numberline {9.2}Balkenplan}{52}
+\contentsline {subsection}{\numberline {9.3}Meilensteinplan}{53}
+\contentsline {section}{\numberline {10}Management Summary}{54}
+\contentsline {section}{\numberline {11}Glossar}{54}

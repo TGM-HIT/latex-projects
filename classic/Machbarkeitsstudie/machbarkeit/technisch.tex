@@ -1,0 +1,109 @@
+\subsection{Technische Machbarkeit}
+Es wird die technische Machbarkeit des Projektes anhand seiner Umsetzungsmöglichkeiten analysiert und die am besten geeigneten Option gewählt.
+\subsubsection{Programmiersprache}
+Um eine einfache und umfangreiche Programmierung zu ermöglichen wird die betriebssystemunabhängige Programmiersprache Java zum Einsatz kommen. Die Funktionalitäten dieser Sprache umfassen die Anforderungen des Projekts und sind dem Projektteam im Allgemeinen bekannt.
+\subsubsection{Verschlüsselung}
+Verschlüsselungsarten haben Vor- und Nachteile. Diese werden in den folgenden Paragrafen behandelt und ausführlich beschrieben.
+\begin{indentE}\mbox{}
+	\paragraph{AES256}\mbox{}\\
+	AES256 ist eine schlüsselbasierte Verschlüsselung mit einem 256 Bit Algorithmus. Dies bedeutet, dass ein zu verschlüsselndes Zeichen zu einer nach dem Schlüssel generierten Zeichenkette von 256 Zeichen wird. Dies erhöht die Sicherheit, wirkt sich jedoch auf den Speicher aus, da mehrere Zeichen mehr Speicherverbrauch bedeuten.
+	
+	\paragraph{Benutzerdefiniert}\mbox{}\\
+	Eine benutzerdefinierte Verschlüsselung ist meist die sicherste Methode, da man hierzu keine öffentlichen Entschlüsselungsverfahren finden kann. Sie sind jedoch sehr aufwendig zu erstellen und erfordern viel Fachwissen.
+	
+	\paragraph{Kodierung}\mbox{}\\
+	Kodierungen sind im Gegensatz zu Verschlüsselungen einheitlich. Sie haben die selben Muster und können mit Hilfe von Online-Methoden innerhalb von wenigen Sekunden dekodiert werden. Diese Art von Sicherheit ist sehr einfach zu implementieren und erfordert keinen großen Aufwand. Sie ist jedoch die Unsicherste von allen Methoden.
+	
+	\paragraph{Nutzwertanalyse}\mbox{}\\
+	Die Analyse des Nutzwertes der Verschlüsselungsmethode zeigt, welche Art am besten geeignet ist. Da die Sicherheit der Methode im Vordergrund steht, ist es wichtig Wert darauf zu legen und dies als größten Entscheidungsfaktor zu definieren. Durch den Zusammenhang der Schnelligkeit, der Einfachheit und der Effizienz bildet sich mithilfe der Sicherheit eine einheitliche Nutzwertstatistik, die dazu führen lässt, dass die Verschlüsselung AES256 eher geeignet ist, als die Konkurrenz.
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabularx} {\linewidth}{|X|c|c|c|c|c|c|c|}
+				\hline
+				\multicolumn{2}{|c|}{\textbf{Kriterien}} & 
+				\multicolumn{2}{c|}{\textbf{AES256}} &
+				\multicolumn{2}{c|}{\textbf{Benutzerdef.}} & 
+				\multicolumn{2}{c|}{\textbf{Kodierung}} \\
+				\hline
+				Sicherheit & 40\% & Anteil & 18\% & Anteil & 22\% & Anteil & 0\% \\
+				\hline
+				Schnelligkeit & 20\% & Anteil & 5\% & Anteil & 4\% & Anteil & 11\% \\
+				\hline
+				Einfachheit & 30\% & Anteil & 12\% & Anteil & 3\% & Anteil & 15\% \\
+				\hline
+				Effizienz & 10\% & Anteil & 5\% & Anteil & 4\% & Anteil & 1\% \\
+				\hline
+				Eignung & 100\% &  & 40\% &  & 33\% &  & 27\% \\
+				\cline{1-2}\cline{4-4}\cline{6-6}\cline{8-8}
+			\end{tabularx}
+		\end{center}
+	\end{table}
+\end{indentE}
+
+\subsubsection{Datentransfer}
+Die meist genutzten Technologien des heutigen Datentransfers für Mobilgeräte werden in Einzelheiten beschrieben und konkret analysiert.
+\begin{indentE}\mbox{}
+	\paragraph{WLAN}\mbox{}\\
+	Eine kabellose Internetverbindung wie WLAN ist in der Lage, eine schnelle Datenbrücke aufzubauen und mehrere Geräte gleichzeitig zu verbinden. Bei WLAN-Verbindungen finden jedoch häufig Unterbrechungen statt, da es beispielsweise nicht durch Stahlwände hindurchstrahlt, da es eine hohe Frequenz hat. Weiters ist es keine Herausforderung Daten über WLAN abzuhören, da es einen großen Radius hat und zudem standardisierte Verschlüsselungen nutzt.
+	
+	\paragraph{BlueTooth}\mbox{}\\
+	BlueTooth ist eine kabellose Technologie, welche bei Kurzstreckendatenverbindungen eingesetzt wird und eine niedrige Frequenz nahe der Radiowellen benutzt. Es ist dementsprechend langsamer als WLAN. BlueTooth ist nicht in der Lage mehr als einen Empfänger zu haben kann jedoch Daten ohne einer Internetverbindung transferieren. Die Datenbrücke über einen RFCOMM-Channel ist sehr sicher, da sie im PAN-Betrieb keine große Reichweite hat, um abgehört zu werden.
+	
+	\paragraph{Nutzwertanalyse}\mbox{}\\
+	Die Analyse des Nutzwertes der Verbindungstechnologie zeigt, welche Art am besten geeignet ist. Hierbei steht die Abhörsicherheit im Mittelpunkt der Faktoren. Gemeinsam mit der Reichweite, der Stärke und der Geringhäufigkeit bildet sie eine stark geneigte Eignung zur BlueTooth-Technologie. Das Ergebnis besagt nun, dass die Verwendung von BlueTooth mehr geeignet ist, als die ihrer Konkurrenz.
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabularx} {\linewidth}{|X|c|c|c|c|c|}
+				\hline
+				\multicolumn{2}{|c|}{\textbf{Kriterien}} & 
+				\multicolumn{2}{c|}{\textbf{WLAN}} &
+				\multicolumn{2}{c|}{\textbf{BlueTooth.}} \\
+				\hline
+				Reichweite & 10\% & Anteil & 8\% & Anteil & 2\% \\
+				\hline
+				Abhörsicherheit & 40\% & Anteil & 4\% & Anteil & 36\% \\
+				\hline
+				Stärke & 20\% & Anteil & 13\% & Anteil & 7\%  \\
+				\hline
+				Geringhäufigkeit & 30\% & Anteil & 3\% & Anteil & 27\%  \\
+				\hline
+				Eignung & 100\% &  & 28\% &  & 72\%\\
+				\cline{1-2}
+				\cline{4-4}
+				\cline{6-6}
+			\end{tabularx}
+		\end{center}
+	\end{table}
+\end{indentE}
+\subsubsection{Kompression}
+Im Folgenden werden zwei Arten der Kompression beschrieben und es wird zu einer detaillierten Nutzwertanalyse gegriffen.
+\begin{indentE}\mbox{}
+	\paragraph{Verlustfreie Kompression}\mbox{}\\
+	Eine verlustfreie Kompression komprimiert die gegebenen Daten so, dass mehrfache Inhalte kleiner zusammengefasst werden und beim dekomprimieren wieder ausgebreitet werden. Diese Methode ist nicht die effektivste, sie ist jedoch für wichtige Daten, die keine Verluste aufweisen dürfen sehr geeignet. Sie ist zudem schnell, geben jedoch nicht die meiste Menge an Speicherplatz frei. ZIP und RAR sind Beispiele für solch eine Kompressionsart. 
+	
+	\paragraph{Verlustbehaftete Kompression}\mbox{}\\
+	Die effektivsten Methoden zur Komprimierung sind verlustbehaftete Kompressionen, da sie viele unnötige Details einfach entfernen. Nachteil ist auch, dass die Inhalte erst einmal gelöscht werden müssen und diese Methode dadurch etwas langsamer ist. Solch Methoden werden meist vereinzelt in eigenen Dateiformaten wie MP3 und JPEG eingesetzt.
+	
+	\paragraph{Nutzwertanalyse}\mbox{}\\
+	Die Analyse des Nutzwertes der Kompressionsmethode zeigt, welche Art am besten geeignet ist. Eindeutiger Weise ist die Schnelligkeit, da BlueTooth die langsamere Übertragungsraten besitzt, im Mittelpunkt. Auch wenn die Kompressionsrate bei der Konkurrenz von ZIP wesentlich besser wäre, ist es effizienter diese Methode aus Gründen der Konsistenz und Schnelligkeit zu wählen.
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabularx} {\linewidth}{|X|c|c|c|c|c|c|c|}
+				\hline
+				\multicolumn{2}{|c|}{\textbf{Kriterien}} & 
+				\multicolumn{2}{c|}{\textbf{ZIP}} &
+				\multicolumn{2}{c|}{\textbf{RAR}} & 
+				\multicolumn{2}{c|}{\textbf{Benutzerdef.}} \\
+				\hline
+				Schnelligkeit & 60\% & Anteil & 30\% & Anteil & 18\% & Anteil & 12\% \\
+				\hline
+				Kompressionsrate & 30\% & Anteil & 9\% & Anteil & 15\% & Anteil & 6\% \\
+				\hline
+				Konsistenz & 10\% & Anteil & 6\% & Anteil & 3\% & Anteil & 1\% \\
+				\hline
+				Eignung & 100\% &  & 45\% &  & 36\% &  & 19\% \\
+				\cline{1-2}\cline{4-4}\cline{6-6}\cline{8-8}
+			\end{tabularx}
+		\end{center}
+	\end{table}
+\end{indentE}

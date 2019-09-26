@@ -1,0 +1,108 @@
+\section{Machbarkeit}
+Das Projekt wird anhand seine wirtschaftlichen und technischen Machbarkeit analysiert. Dabei sol sich herausstellen ob der Beginn des gerechtfertigt ist, und wie dessen Umsetzung ausschauen soll.
+\input{machbarkeit/technisch}
+\subsection{Wirtschaftliche Machbarkeit}
+Es wird der Aufwand welcher für das Projektteam anfällt beschrieben. Ebenfalls werden die verschiedenen Risiken welche auftreten können erklärt und in einer Risikomatrix visuell dargestellt.
+\subsubsection{Personalaufwand}
+Allgemein kann man es in 3 größere Teile einteilen. Einmal der Entwicklung der Desktop-Version, auf welche hohe Priorität gelegt wird, einmal die Erstellung einer Mobiltelefon-Applikation und zuletzt die Entwicklung eines Webportals auf dem das Produkt vorgestellt wird. Diese 3 Teile kann man erneut in 2 Teile teilen nämlich Back-End und Front-End.
+\\
+All das wird einiges an Durchführungszeit beanspruchen weswegen alle Entwickler Zeitgleich an dem Projekt arbeiten. Insgesamt wird das Projekt 200 Stunden zur Fertigstellung brauchen, wobei jeder im Projektteam ungefähr gleichlang daran arbeitet.
+\newpage
+\subsubsection{Risikoanalyse}
+Bei diesem Projekt sind, genau wie bei jedem anderen auch, Risiken nicht vermeidbar. Einer dieser Risiken könnte eventuelle Abwesenheit sein. Falls dieser Fall in Kraft treten sollte werden die restlichen Entwickler im Projektteam den fehlenden Teil übernehmen.
+\begin{table}[H]
+	\begin{center}
+		\begin{tabularx} {\linewidth}{
+				|c|X|c|c|c|c|X|
+			}
+			\hline
+			\footnotesize \multirow{3}{\dimexpr.125\linewidth-2\tabcolsep-1.3333\arrayrulewidth}{Arbeits-paket}&\multirow{3}{*}{Projektrisiko}&\multirow{3}{\dimexpr.1\linewidth-2\tabcolsep-1.3333\arrayrulewidth}{\scriptsize Wahr-schein-lichkeit}&\multicolumn{3}{c|}{\multirow{2}{*}{Auswirkung auf}}&\multirow{3}{*}{Gegenstrategie}\\
+			& & & \multicolumn{3}{c|}{} &\\
+			\cline{4-6}
+			&&&\scriptsize Qualität&\scriptsize Kosten&\scriptsize Zeit&\\
+			\hline
+			1.1 & Deadline nicht eingehalten & 5\% & 0 & 0 € & +10h & Proaktiv: Arbeitseinteilung besser planen Reaktiv: Bessere Zeitplanung\\
+			\hline
+			1.2 & Konflikt im Team & 15\% & 2 & 0 € & +8h & Proaktiv: Teambildung fördern \newline Reaktiv: Konflikt besprechen\\
+			\hline
+			1.3 & Arbeits-verweigerung & 5\% & 2 & 0 € & +10h & Proaktiv: Teambildung fördern Reaktiv: Konflikt besprechen \\
+			\hline
+			1.4 & Deadline nicht eingehalten & 5\% & 0 & 0 € & +10h & Proaktiv: Arbeitseinteilung besser planen \newline Reaktiv: Überstunden einarbeiten\\
+			\hline
+			2.1.1 & Aufwändige Aufsetzung & 15\% & 1 & 0 € & +3h & Proaktiv: Bekannte Software verwenden \newline Reaktiv: Experten fragen\\
+			\hline
+			2.1.2 & Verringerte Funktionalität & 5\% & 3 & 50 € & +10h & Proaktiv: Funktionen aufteilen \newline Reaktiv: Meeting mit Auftraggeber\\
+			\hline
+			2.1.3 & Sicherheitslücken & 10\% & 2 & 150 € & +10h & Proaktiv: Ausführliches Testen \newline Reaktiv: Patches herausbringen\\
+			\hline
+		\end{tabularx}
+	\end{center}
+\end{table}
+\newpage
+\begin{table}[H]
+	\begin{center}
+		\begin{tabularx} {\linewidth}{
+				|c|X|c|c|c|c|X|
+			}
+			\hline
+			\footnotesize \multirow{3}{\dimexpr.125\linewidth-2\tabcolsep-1.3333\arrayrulewidth}{Arbeits-paket}&\multirow{3}{*}{Projektrisiko}&\multirow{3}{\dimexpr.1\linewidth-2\tabcolsep-1.3333\arrayrulewidth}{\scriptsize Wahr-schein-lichkeit}&\multicolumn{3}{c|}{\multirow{2}{*}{Auswirkung auf}}&\multirow{3}{*}{Gegenstrategie}\\
+			& & & \multicolumn{3}{c|}{} &\\
+			\cline{4-6}
+			&&&\scriptsize Qualität&\scriptsize Kosten&\scriptsize Zeit&\\
+				\hline
+				2.2.1 & Mockups passen dem Auftraggeber nicht & 5\% & 1 & 100 € & +3h & Proaktiv: Regelmäßigere Gespräche \newline Reaktiv: Absprache mit Auftraggeber \\
+				\hline
+				2.2.2 & Aufwändiger Prototyp & 5\% & 1 & 0 € & +10h & Proaktiv: Funktionen aufteilen \newline Reaktiv: Absprache mit Auftraggeber \\
+				\hline
+				2.2.3 & Backend nicht rechtzeitig fertig & 5\% & 1 & 50 € &  +10h & Proaktiv: Bessere Zeitplanung \newline Reaktiv: Absprache mit Auftraggeber\\
+				\hline
+				2.2.4 & Produkt ist nicht rechtzeitig fertig & 5\% & 1 & 100 € &  +15h &Proaktiv: Bessere Zeitplanung Reaktiv: Absprache mit Auftraggeber\\
+				\hline
+				3.1.1 & Aufwändige Aufsetzung & 15\% & 1 & 0 € & +4h & Proaktiv: Bekannte Software verwenden \newline Reaktiv: Experten fragen \\
+				\hline
+				3.1.2 & Nicht innerhalb der Zeit möglich & 5\% & 4 & 1000 € &  & Proaktiv: Bessere Zeiteinplanung \newline Reaktiv: Wird gestrichen, da Should Have\\
+				\hline
+				3.1.3 & Sicherheitslücken & 10\% & 2 & 150 € & +10h & Proaktiv: Ausführliches testen \newline Reaktiv: Patches herausbringen\\
+				\hline
+				3.2.1 & Mockups passen dem Auftraggeber nicht & 5\% & 1 & 100 € & +3h &  Proaktiv: Regelmäßige Gespräche\newline Reaktiv: Absprache mit Auftraggeber \ \\
+				\hline
+		\end{tabularx}
+	\end{center}
+\end{table}
+\newpage
+\begin{table}[H]
+	\begin{center}
+		\begin{tabularx} {\linewidth}{
+				|c|X|c|c|c|c|X|
+			}
+			\hline
+			\footnotesize \multirow{3}{\dimexpr.125\linewidth-2\tabcolsep-1.3333\arrayrulewidth}{Arbeits-paket}&\multirow{3}{*}{Projektrisiko}&\multirow{3}{\dimexpr.1\linewidth-2\tabcolsep-1.3333\arrayrulewidth}{\scriptsize Wahr-schein-lichkeit}&\multicolumn{3}{c|}{\multirow{2}{*}{Auswirkung auf}}&\multirow{3}{*}{Gegenstrategie}\\
+			& & & \multicolumn{3}{c|}{} &\\
+			\cline{4-6}
+			&&&\scriptsize Qualität&\scriptsize Kosten&\scriptsize Zeit&\\
+			\hline
+				3.2.2 & Aufwändiger Prototyp & 5\% & 1 & 0 € & +10h & Proaktiv: Funktionen aufteilen\newline Reaktiv: Absprache mit Auftraggeber\\
+				\hline
+				3.2.3 & Backend nicht rechtzeitig fertig & 5\% & 1 & 50 € &  +15h & Proaktiv: Bessere Zeitplanung \newline Reaktiv: Absprache mit Auftraggeber\\
+				\hline
+				3.2.4 & Produkt ist nicht rechtzeitig fertig & 5\% & 1 & 100 € &  +20h & Proaktiv: Bessere Zeitplanung\newline Reaktiv: Absprache mit Auftraggeber\\
+				\hline
+				4.1 & Browser-inkompatibilität & 10\% & 1 & 0 & +5h & Proaktiv: Über Standards informieren\newline Reaktiv: Patches herausbringen\\
+				\hline
+				4.2 & Sicherheitslücke bei Kauf & 5\% & 1 & 250 € & +10h &Proaktiv: Ausführliches Testen\newline Reaktiv: Patches herausbringen\\
+				\hline
+				4.3 & Veröffentlichung abgelehnt & 1\% & 0 & 0 € & +0h & Proaktiv: Über Uploadkriterien informieren\newline Reakiv: Produkt nicht auf externen Plattformen veröffentlichen\\
+				\hline
+		\end{tabularx}
+	\end{center}
+\end{table}
+\newpage
+\begin{indentE}\mbox{}
+	\paragraph{Qualität}\mbox{}\\
+	Die Qualität wird mit einer Skala von 0 bis 4 bewertet, wobei die Qualität von 0 ansteigend immer stärker beeinträchtigt wird.
+	\paragraph{0} Die Qualität des Produktes wird nicht beeinflusst
+	\paragraph{1} Die Qualität des Produktes wird minimal beeinflusst und es können einzelnen Merkmale wegfallen
+	\paragraph{2} Die Qualität des Produktes wird leicht beeinflusst und es können mehrere Merkmale wegfallen
+	\paragraph{3} Die Qualität des Produktes wird beeinflusst und es können einzelne Wunschkriterien wegfallen
+	\paragraph{4} Die Qualität des Produktes wird stark beeinflusst und es könne mehrere Wunschkriterien wegfallen
+\end{indentE}

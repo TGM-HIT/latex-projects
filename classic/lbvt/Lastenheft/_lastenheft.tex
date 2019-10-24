@@ -1,0 +1,204 @@
+
+
+%!TEX root=../protocol.tex	% Optional
+
+\section{Einführung}
+Für die IT-Abteilung der Höheren Technischen Bundeslehranstalt TGM soll für
+Lernbüroklassen ein neues Anwesenheitskontroll-Konzept umgesetzt werden.
+Lernbüroschüler können selbst ihren Unterricht auswählen und einteilen, um
+einen selbstbestimmteren Schulablauf zu ermöglichen. Um die dazugehörige
+Bürokratie in Bezug auf Anwesenheit zu verringern, sollen Kartenleser
+installiert werden, um die Anwesenheitskontrolle automatisiert abwickeln zu
+können.
+
+\section{Zielbestimmung}
+Im Rahmen des Projektes soll die Entwicklung eines Kartenlesers als Muster für die Lernbüroklassen abgeschlossen werden. Auf diesem sollen Schüler ihre Schülerkarte einlesen können, um sich im Lernbüro anzumelden und zu identifizieren. Der Kartenleser soll die eingelesenen Daten dann an den Zwischenplattform-Server (kurz \gls{zps}) weiterleiten, welcher diese dann verarbeitet und in die \gls{lba} einträgt.\\
+Durch die Installation solcher Kartenleser kann der Anmeldevorgang deutlich schneller und reibungsloser gestaltet werden. Außerdem werden automatisch Datensätze zur Anwesenheit der Schüler generiert und müssen nicht mehr händisch aus den Klassenbüchern abgetippt werden. Die dafür benötigte Bearbeitungszeit entfällt und entlastet somit die Lehrkräfte.
+\section{Produkteinsatz}
+Das Lernbüroverwaltungstool (kurz \gls{lbvt}) ist für die Anforderungen der IT-Abteilung des TGMs zugeschnitten. Derzeit soll es nur in Lernbüroklassen eingesetzt werden, kann aber in Zukunft auf jede beliebige Klasse der Tagesschule ausgeweitet werden. Das \gls{lbvt} soll im Einklang mit der \gls{lba} zusammenarbeiten und für Schüler und Lehrer ausgelegt sein.
+\section{Produktfunktionen}
+\subsection{Kartenleser Funktionen}
+\begin{itemize}[leftmargin=1.0in]
+    % Kartenleser-Funktionen
+    \item [\lf] Karten einlesen \\
+        Die Schüler sollen ihre Schülerkarte beim Kartenleser einlesen können. Das Einlesen soll durch eine drahtlose Kommunikation zwischen Kartenleser und Schülerkarte erfolgen. \newpage
+    \item [\lf] Daten speichern \\
+        Die durch die Funktion /LF0010/ eingelesenen Daten sollen im Speicher des Kartenlesers abgelegt werden. Dieser Speicher dient als Zwischenspeicher und Backupsystem, damit im Falle einer Störung, in der der \gls{zps} aus verschiedenen Gründen die Daten des Kartenlesers nicht annehmen kann, die Daten immer noch am Kartenleser gesichert sind und zu einem späteren Zeitpunkt wieder gesendet werden können. \\
+        Das erfolgreiche Speichern ruft die Funktion /LF0060/ aus.
+    \item [\lf] Kartenleser-Daten senden \\
+        Nach erfolgreichem Speichern, sollen die im Zwischenspeicher vorhandenen Daten an den \gls{zps} gesendet werden. 
+    \item [\lf] \gls{zps}-Daten empfangen \\
+        Um eine Rückmeldung vom \gls{zps} empfangen zu können, muss der Kartenleser Daten vom diesem empfangen können. 
+    \item [\lf] Zwischenspeicher leeren \\
+        Falls der Kartenleser eine positive Rückmeldung, ein sogenanntes \\ \gls{ack}, vom \gls{zps} bekommt,  %was bedeutet, dass die Schülerkarten-Daten erfolgreich an das Serversystem übermittelt wurden, 
+        sollen alle Schülerdaten die übergeben wurden, vom Zwischenspeicher entfernt werden.
+    \item [\lf] Einlese-Feedback \\
+        Das erfolgreiche Einlese mit Speicherung einer Schülerkarte soll entweder ein auditives oder visuelles Feedback am Kartenleser zurückgeben.
+    \item [\lf] Statusanzeige \\
+        Der Kartenleser ist in der Lage den aktuellen Verbindungsstatus, sowie den Erfolg/Misserfolg eines Lesevorganges am Gerät anzuzeigen.
+\end{itemize}
+    % Server-Funktionen
+    \lfn
+\subsection{\gls{zps} Funktionen}
+\begin{itemize}[leftmargin=1.0in]
+    %\item [\lf]  Anmeldedaten speichern\\
+      %  Der Server speichert die Anmeldedaten der Schüler in einer Datenbank ab. Welche Daten gespeichert werden ist bei Produktdaten unter den  spezifiziert.\\
+      % Unnötig da das ganze als unter den Produktdaten eh schon definiert ist. Wir brauchen keine extra fkt dafür
+        
+    %\item[\lf] Anmeldedaten empfangen und entschlüsseln\\
+        %Der Kartenleser sendet gemäß /LD0050/ Daten an den Server. Dieser verfügt über eine Schnittstelle mit welcher er die Informationen empfangen kann. Die Daten werden vor der Weiterverarbeitung entschlüsselt.
+    
+    \item[\lf] Kartenleser-Daten empfangen\\
+        Der Kartenleser sendet gemäß /LD0050/ Daten, die die Anmeldungen von Schülern per Karten-ID enthalten, an den \gls{zps}. Dieser verfügt über eine Schnittstelle, mit welcher er die Informationen empfangen kann. %Die Daten werden vor der Weiterverarbeitung entschlüsselt.
+    
+    \item[\lf] Daten verarbeiten\\
+        Der \gls{zps} übersetzt die empfangene Karten-ID auf einen eindeutigen Schüler um. Anhand von den Daten des Kartenlesers wird dem Schüler automatisch die Anwesenheit für den Raum, in dem sich der Kartenleser befindet, eingetragen. Am Anfang des Prozesses wird überprüft, ob der Schüler bereits anwesend ist und gegebenenfalls wird die weitere Verarbeitung der Daten abgebrochen.
+    \newpage
+    
+    \item[\lf] Daten weitersenden\\
+        Sobald alle benötigten Daten verarbeitet wurden, werden diese an die \gls{lba} weitergesendet, damit hier ebenfalls die Anwesenheit eingetragen werden kann.
+        
+    \item[\lf] \gls{zps}-Daten senden \\ %Anmelde-Daten wurden erfolgreich Empfangen\\
+        Der \gls{zps} sendet ein \gls{ack} an den Kartenleser, der die Daten gesendent hat, zurück, sobald gültige Anmelde-Daten empfangen und gespeichert wurden.
+        % ka wie viel Sinn es hat Ack-packets zu verschlüsseln... notfalls borko/umar fragn
+        
+    \item[\lf] Klassenliste einlesen\\
+        Der \gls{zps} kann Klassenlisten einlesen und diese in seiner lokalen Datenbank speichern.
+\end{itemize}
+\lfn
+\subsection{Funktionen für die Grafische Oberfläche in der \gls{lba}}
+\begin{itemize}[leftmargin=1.0in]
+    % GUI-Funktionen
+    \item [\lf] Kartenleserdaten anzeigen \\
+        Über die grafische Oberfläche in der \gls{lba} sollen die IDs der einzelnen Kartenleser mit ihren derzeitigen Räumen in einer Tabelle angezeigt werden können.
+    \item [\lf] Raumzuteilung anzeigen \\
+        Gemeinsam mit der ID des Kartenlesers sollen, in der grafischen Oberfläche der \gls{lba}, auch die derzeitig eingetragenen Räume zu den Kartenlesern angezeigt werden können. 
+    \item [\lf] Kartenleser den Räumen zuordnen \\
+        Über die grafische Oberfläche in der \gls{lba} soll außerdem die Möglichkeit bestehen den einzelnen Kartenleser Räume zuzuordnen. Diese Zuordnung soll dann im System gespeichert werden und den anderen Funktionen zu Verfügung stehen.
+\end{itemize}
+
+
+\section{Produktdaten}
+% Martin Wustinger
+\subsection{\gls{zps}-Daten}
+Daten welche am \gls{zps} gespeichert sind und verwendet werden:
+\begin{itemize}[leftmargin=1.0in]
+    \item [\ld] Klassenlisten \\
+    Die Klassenlisten der einzelnen Klassen, aus denen sich Schüler anmelden können. In ihr müssen nur die Namen der einzelnen Schüler gespeichert werden. \newpage
+    
+    
+    \item [\ld] \gls{dic} (ID zu Name) \\
+    Eine Datei in der zu jeder ID der dazugehörige Schülername gespeichert ist. Dieses \gls{dic} wird benötigt um die Umwandlung einer ID zu einem Schülernamen ermöglichen zu können.
+    \item [\ld] Anwesenheitsdatenliste \\
+    Die Anwesenheitsdatenliste beinhaltet die Anwesenheiten der Schüler. Über sie werden die Schüler-Informationen dann in die Datenbank vom \gls{lbvt} eingetragen. Folgende Daten müssen in der Anwesenheitsdatenliste gespeichert werden:
+    \begin{itemize}
+        \item Datum und Zeit, zu der sich der Schüler anwesend angemeldet hat 
+        \item ID des Schülers
+        \item Klasse des Schülers
+        \item Name des Schülers
+        \item Anwesendheitsstatus des Schülers
+    \end{itemize}
+    \item [\ld] Daten der Kartenleser \\
+    Der \gls{zps}, sowie die grafische Oberfläche in der \gls{lba} benötigen, um Kartenleser Räumen zuordnen zu können, folgende Daten
+    \begin{itemize}
+        \item ID des Kartenlesers
+        \item derzeitiger Raum des Kartenlesers
+        \item Unterrichtsfach
+    \end{itemize}
+\end{itemize}
+
+
+\subsection{Kartenleser-Daten}
+Daten welche am Kartenleser gespeichert sind:
+\begin{itemize}[leftmargin=1.0in]
+    \item [\ld] Liste mit Schüler-Anwesenheits-\gls{timst}s \\
+    Jedes Mal wenn sich ein neuer Schüler anmeldet wird ein neuer Eintrag in der Liste erstellt. Alle bis dahin ungesendeten Einträge werden daraufhin an den \gls{zps} gesendet. Sobald eine positive Antwort vom \gls{zps} zurück kommt werden alle gesendeten Einträge aus der Liste gelöscht. Folgende Daten müssen dafür gespeichert werden:
+    \begin{itemize}
+        \item \gls{timst} an dem der Schüler seine Karte über den Kartenleser gezogen hat
+        \item ID des Schülers
+    \end{itemize}
+\end{itemize}
+
+
+\section{Zwingende Randbedingungen}
+\subsection{Produktumgebung und Systemintegration}
+Derzeit existiert eine \gls{lba}, die einen Webserver und eine Datenbank verfügt, in der die Anwesenheiten der Schüler gespeichert werden. 
+Die Kartenleser-Hardware wird in das bestehende Schulnetzwerk eingebettet und benötigt daher Netzwerk-Zugangsdaten um ordnungsgemäß zu funktionieren.
+Als Zwischenplattform zwischen \gls{lba} und Kartenleser wird ein Server, kurz \gls{zps}, realisiert, der die Kommunikation zwischen diesen beiden regelt. Dieser Server verfügt über eine eigene Datenbank. 
+%Das Betriebssystem des Servers muss in der Lage sein Anwendungen auszuführen. Ebenso muss es einen Webserver und eine lokale Datenbank unterstützen. Weiters muss der Server vom Netzwerk der Schule aus erreichbar sein.
+\subsection{Schnittstellen}
+Die Hardware des \gls{lbvt} benötigt eine Netzwerkschnittstelle, um mit dem \gls{zps} kommunizieren zu können. Außerdem benötigt die Serversoftware Zugang zu einer Schnittstelle der \gls{lba}, um die empfangenen Daten in das System einzutragen.
+
+\section{Vertragsgegenstand}
+\subsection{Lieferumfang}
+Das \gls{lbvt} soll mit Projektende inklusive aller definierten Funktionen dem Auftraggeber überreicht werden. Der \gls{zps} soll dann fertig ins Schulnetzwerk integriert und konfiguriert werden. Das Kartenleser Muster wird ohne Testzugangsdaten übergeben. 
+Außerdem wir ein \gls{speicherabbild} vom diesem übergeben, um weitere Kartenleser mit diesem aufsetzen zu können.  
+%Die zur Funktion benötigte Software wird in Form eines \gls{git-repo} ebenfalls zur Reproduktion übergeben. Die Serversoftware und Webumgebung wird ohne Datenbankinhalt ebenfalls mit dem \gls{git-repo} übermittelt.
+\subsection{Produktleistungen}
+\begin{itemize}[leftmargin=1.0in]
+    % GUI-Funktionen
+    \item [\ll] Dauer des Kartenlesevorgangs \\
+        Das Auslesen der ID einer Schülerkarte soll in unter einer Sekunde abgeschlossen sein.
+    \item [\ll] Client zu Server Übertragung \\
+        Die Übertragung einer eingelesenen ID zum \gls{zps} soll bei niedriger Netzwerklast weniger als eine Sekunde dauern.
+    \item [\ll] Zwischenspeicherung bei Netzwerkausfall \\
+        Das Kartenlesegerät ist in der Lage die Eintragung einer Schülerkarte persistent am Lesegerät bis zur Wiederverbindung mit dem Netzwerk zu speichern.
+    \item [\ll] Erreichbarkeit der Webschnittstelle \\
+        Die Webschnittstelle des \gls{zps}s ist von Lehrkräften im Schulnetzwerk lesbar.
+    \item [\ll] Zugriffsschutz \\
+        Die Hardware des \gls{lbvt} ist gegen Zugriff von Unbefugten gesichert. Dies geschieht durch die Deaktivierung unbenutzter Schnittstellen sowie der Einbau in einer geeigneten Hülle.
+    \item [\ll] Statusanzeige \\
+        Das Lesegerät zeigt den aktuellen Verbindungsstatus sowie den Erfolg/ Misserfolg eines Lesevorganges an.
+    \item [\ll] Tragbarkeit des Lesegerätes \\
+        Das Lesegerät ist in der Lage ohne direkten Stromanschluss zu funktionieren. Der eingebaute Akku kann das Gerät bis zu 48 Stunden ohne Anschluss an das Stromnetz betreiben.
+    \item [\ll] Verschlüsselung der Übertragung \\
+        Die Übertragung zwischen Kartenleser und \gls{zps} soll verschlüsselt verlaufen, damit Dritte nicht auf die gesendeten Pakete zugreifen können.
+\end{itemize}
+\subsection{Produktbezogene Leistungen}
+Die zur Reproduktion der Hardware benötigen Schritte werden in Form eines Handbuches beigelegt. 
+\section{Qualitätsanforderungen}
+Es wird ein sehr hoher Wert auf die Funktionalität und Zuverlässigkeit des \gls{lbvt} gesetzt, da dieses die Anwesenheit der Schüler regelt und daher nicht ausfallen sollte, um einen geregeleten Schulablauf garantieren zu können. Auch wird der Übertragbarkeit besondere Aufmerksamkeit geschenkt, da der Muster-Kartenleser reproduzierbar sein sollte. Die Punkte Benutzerbarkeit und Änderbarkeit werden ebenfalls stark berücksichtigt, da das ganze System einsteigerfreundlich und einfach zu bedienen sein sollte. Außerdem soll das ganze System änderbar sein, darunter wird verstanden, dass das ganze System mit mehr Kartenlesern erweitern werden kann. Die Effizienz wird als normal angesehen, da alle Prozesse zeitlich schnell ablaufen sollten, aber keine Prozesse als kritisch eingestuft werden. 
+
+\begin{center}
+
+\begin{tabular}{|c|c|c|c|c|}
+
+\hline
+    \rowcolor{gray} \textbf{\color{white}Produktqualität}&\textbf{\color{white}Sehr gut}&\textbf{\color{white}Gut}&\textbf{\color{white}Normal}&\textbf{\color{white}Irrelevant} \\
+     \hline 
+     Funktionalität&x&&&\\
+     \hline
+     Zuverlässigkeit&x&&&\\
+     \hline
+     Benutzbarkeit&&x&&\\
+     \hline
+     Effizienz&&&x&\\
+     \hline
+     Änderbarkeit&&x&&\\
+     \hline
+     Übertragbarkeit&x&&&\\
+\hline
+\end{tabular}
+\end{center}
+
+
+
+
+\begin{comment}
+
+\section{HOWTO Glossar (nur  als BSP damit's alle verstehen) :}
+Systemtechnik ist auch im Literaturverzeichnis weshalb dieses auch angezeigt wird.\\\\
+Zur Verwaltung des Glossars wird standardmäßig die Datei \texttt{glossaries.tex} verwendet, wobei sowohl Definitionen als auch Akronyme definiert werden können.
+\\\\
+Als Beispiel wurde ein Akronym für \gls{ac-syt} und eine Definition zu \gls{ac-syt} selbst hinzugefügt.
+
+\begin{listing}
+\inputcode{tex}{glossaries.tex}
+\caption{Glossareintrag}
+\label{lst:glossaries}
+\end{listing}
+~\\
+Im Dokument selbst kann ein Akronym mittels \verb|\gls{ac-syt}| verwendet werden. Beachte, dass ein Akronym welches bereits im Dokument verwendet wurde, bei der ersten Verwendung ausgeschrieben und danach immer gekürzt wird.
+\\\\
+Mit \verb|\gls{syt}| kann zum Beispiel eine Referenz zur Definition von \gls{syt} hinzugefügt werden.
+\end{comment}

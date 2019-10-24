@@ -1,0 +1,120 @@
+\documentclass[minted, notitle]{protocol}
+% Packages
+\usepackage{enumitem}
+\usepackage{verbatim}
+%\documentclass[xcolor=dvipsnames]{beamer} 
+\usepackage{pgfmath}
+\usepackage{sectsty}
+\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\usepackage{tabularx}
+\usepackage{rotating}
+\usepackage{colortbl} % Bunte hlines
+\usepackage{makecell}
+
+
+\usepackage{array, boldline, makecell, booktabs}
+\newcommand\btrule[1]{\specialrule{#1}{0pt}{0pt}}
+
+
+%\usepackage{paralist}
+%\usepackage{enumerate}
+%\usepackage{enumitem}
+%\usepackage{enumitem,showframe}
+
+\usepackage{tikz}        
+
+\newcommand\mybox[3][]{%
+    \tikz[anchor=base,baseline]\node[inner sep=2pt,draw=#2,#1]{$\displaystyle#3\mathstrut$};}
+\colorlet{mycol}{white}
+
+
+
+% Optional
+% \mysubtitle{Lastenheft}
+% \mysubject{Systemtechnik Labor}
+%\mycourse{xHIT 2017/18, Gruppe A}
+% Version
+% \myteacher{}
+
+%\mybegin{31. Januar 2018}
+%\myfinish{17. April 2018}
+% \setcode{frame=single} 			% Add a frame to codes (single, lines)
+% \setcode{bgcolor=MyLightGray}		% Add a background to codes (minted only)
+% \usemintedstyle{rainbow_dash} 	% autumn, rainbow_dash, tango (default), trac
+\tocfalse
+\definecolor{celadon}{rgb}{0.67, 0.88, 0.69}
+\definecolor{lightgrey}{rgb}{0.88 0.88 0.88}
+%\definecolor{rlightgreen}{RGB}{221, 246, 202}
+\definecolor{rlightgreen}{RGB}{242, 255, 230}
+%\rowcolors{2}{celadon}{green!70!yellow!40}
+
+\newcommand{\draft}{\cellcolor{Peach} Draft}
+\newcommand{\abgabe}{\cellcolor{LimeGreen}Approved } 
+\newcommand{\version}{1.0}
+
+% Kacpers total wichtige Design-Prinzipien
+\usepackage[sfdefault]{roboto} % The font, that beats them all...
+% Farbensetzen für Sections
+\sectionfont{\color{darkgray}}  % Green Hulk > Red Hulk
+\subsectionfont{\color{gray}}
+\subsubsectionfont{\color{gray}}
+% Ich f*%!-/? liebe Tabellen
+%\rowcolors{2}{rlightgreen}{white} Verwenden, falls man in einer Tabelle
+\newcolumntype{A}[1]{>{\columncolor{rlightgreen}}p{#1}} % Kolumnentyp, für leichte grüne Farbe im Hintergrund 
+% Jeder mag doch grüne Bullet Points oder?
+\newlist{coloritemize}{itemize}{1}
+\setlist[coloritemize]{label=\textcolor{OliveGreen}{\textbullet}}
+
+% Wichtige Variablen, die das Dokument beschreiben:
+\title{Lernbüroverwaltungstool} % Projektname mit \thetitle value holen
+\newcommand{\subtitle}{some random text}
+\myversion{1.4} % Version
+\newcommand{\theversion}{1.4} % Bitte nochmal Version eintragen
+\newcommand{\authors}{Kisser Manuel, Urbaniec Kacper, Welsch Moritz, Wustinger Martin} % Projektteam
+\newcommand{\leader}{Kacper Urbaniec} % Projektleiter
+\date{17.01.2019} % Datum
+%\newcommand{\thedate}{14.11.2018} % Alles muss zweimal angegeben werden
+
+\begin{document}
+\begin{titlepage} % Fancy title page
+	\raggedleft % Right align the title page
+	
+	\begingroup \color{gray}{\rule{3pt}{\textheight}} \endgroup % Vertical line
+	\hspace{0.05\textwidth} % Whitespace between the vertical line and title page text
+	\parbox[b]{0.75\textwidth}{ % Paragraph box for holding the title page text, adjust the width to move the title page left or right on the page
+		{{\fontsize{27}{48} \selectfont  Projekthandbuch}} \\	\vspace{0.146\textheight} \\
+		
+		{\includegraphics[width=220]{images/Logo_1.png}} \\[2\baselineskip]
+		%{{\fontsize{65}{48} \bfseries \color{LimeGreen} LBVT}} \\[0.5\baselineskip] %\LaTeX ~Templates}\\[2\baselineskip] % Title
+		{{\fontsize{20}{48} \selectfont \thetitle}} \\ %[0.5\baselineskip] % Subtitle or further description
+		%{\Large Lernbüroverwaltungstool}\\ [2\baselineskip] % Subtitle or further description
+		{\vspace{-0.5cm}\large \begin{flushleft}Kisser Manuel, Urbaniec Kacper, Welsch Moritz, \\Wustinger Martin\end{flushleft}}\\ [1\baselineskip]
+		
+		{\vspace{0.3cm}\large Version: \theversion}\\ [0.5\baselineskip] % Author name
+		{\large Projektleiter: \leader}\\ [0.5\baselineskip] % Author name
+		{\large Datum: \thedate}\\ [1\baselineskip] % Author name
+		
+		%\vspace{0.5\textheight} % Whitespace between the title block and the publisher
+		
+		{\includegraphics[width=220]{images/tgm_full.png}}
+		%{\noindent The Publisher~~\plogo}\\[\baselineskip] % Publisher and logo
+	}
+\end{titlepage}
+
+% \thispagestyle{fancy}				% Makes the first page fancy too
+% \begin{abstract}\end{abstract} 	% Add a short overview
+%\include{_task} 	% Information about the purpose of this project
+%\include{_solution} % Solution for the given tasks and their documentation
+% \glsaddall 		% Add all glossary entries to printglossaries
+
+
+
+\clearpage
+{ % Wir wollen ja kein blaues Inhaltsverzeichnis :), im blue da ba dee
+  \hypersetup{linkcolor=black}
+  \tableofcontents
+} 
+\clearpage
+\include{_projekthandbuch}
+\end{document}

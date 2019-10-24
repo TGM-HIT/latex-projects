@@ -1,0 +1,109 @@
+\documentclass[minted, notitle]{protocol}
+% Packages
+\usepackage{verbatim}
+%\documentclass[xcolor=dvipsnames]{beamer} 
+\usepackage{pgfmath}
+\usepackage{sectsty}
+
+% Required
+\title{Lernbüroverwaltungstool}
+\author{Welsch Moritz, Kacper Urbaniec, Manuel Kisser, Wustinger Martin}
+% Optional
+% \mysubtitle{Lastenheft}
+% \mysubject{Systemtechnik Labor}
+%\mycourse{xHIT 2017/18, Gruppe A}
+% Version
+% \myteacher{}
+\myversion{1.0}
+% \mybegin{31. Januar 2018}
+% \myfinish{17. April 2018}
+% \setcode{frame=single} 			% Add a frame to codes (single, lines)
+% \setcode{bgcolor=MyLightGray}		% Add a background to codes (minted only)
+% \usemintedstyle{rainbow_dash} 	% autumn, rainbow_dash, tango (default), trac
+\tocfalse
+\definecolor{celadon}{rgb}{0.67, 0.88, 0.69}
+\definecolor{lightgrey}{rgb}{0.88 0.88 0.88}
+%\definecolor{rlightgreen}{RGB}{221, 246, 202}
+\definecolor{rlightgreen}{RGB}{242, 255, 230}
+%\rowcolors{2}{celadon}{green!70!yellow!40}
+
+\newcommand{\draft}{\cellcolor{Peach} Draft}
+\newcommand{\abgabe}{\cellcolor{LimeGreen}Approved } 
+\newcommand{\version}{1.0}
+
+% Kacpers total wichtige Design-Prinzipien
+\usepackage[sfdefault]{roboto} % The font, that beats them all...
+% Farbensetzen für Sections
+\sectionfont{\color{darkgray}}
+\subsectionfont{\color{gray}}
+\subsubsectionfont{\color{gray}}
+% Ich f*%!-/? liebe Tabellen
+%\rowcolors{2}{rlightgreen}{white} Verwenden, falls man in einer Tabelle
+\newcolumntype{A}[1]{>{\columncolor{lightgrey}}p{#1}} % Kolumnentyp, für leichte grüne Farbe im Hintergrund 
+% Jeder mag doch grüne Bullet Points oder?
+\newlist{coloritemize}{itemize}{1}
+\setlist[coloritemize]{label=\textcolor{OliveGreen}{\textbullet}}
+
+\begin{document}
+\begin{titlepage} % Fancy title page
+	\raggedleft % Right align the title page
+	
+	\begingroup \color{gray}{\rule{3pt}{\textheight}} \endgroup % Vertical line
+	%\begingroup \color{OliveGreen}{\rule{3pt}{\textheight}} \endgroup % Vertical line
+	\hspace{0.05\textwidth} % Whitespace between the vertical line and title page text
+	\parbox[b]{0.75\textwidth}{ % Paragraph box for holding the title page text, adjust the width to move the title page left or right on the page
+		{{\fontsize{24}{48} \selectfont  MACHBARKEITSSTUDIE}} \\	\vspace{0.284\textheight} \\
+		
+		{\includegraphics[width=220]{images/Logo_1.png}} \\[2\baselineskip]
+		%{{\fontsize{65}{48} \bfseries \color{LimeGreen} LBVT}} \\[0.5\baselineskip] %\LaTeX ~Templates}\\[2\baselineskip] % Title
+		{{\fontsize{20}{48} \selectfont Lernbüroverwaltungstool}} \\ %[0.5\baselineskip] % Subtitle or further description
+		%{\Large Lernbüroverwaltungstool}\\ [2\baselineskip] % Subtitle or further description
+		{\vspace{-0.5cm}\large \begin{flushleft}Kisser Manuel, Urbaniec Kacper, Welsch Moritz, \\Wustinger Martin\end{flushleft}}\\ [1\baselineskip] % Author name, lower case for consistent small caps
+		
+		%\vspace{0.5\textheight} % Whitespace between the title block and the publisher
+		{\vspace{0.3cm}\includegraphics[width=220]{images/tgm_full.png}}
+		%{\noindent The Publisher~~\plogo}\\[\baselineskip] % Publisher and logo
+	}
+\end{titlepage}
+
+% \thispagestyle{fancy}				% Makes the first page fancy too
+% \begin{abstract}\end{abstract} 	% Add a short overview
+%\include{_task} 	% Information about the purpose of this project
+%\include{_solution} % Solution for the given tasks and their documentation
+% \glsaddall 		% Add all glossary entries to printglossaries
+
+\begin{center}
+\rowcolors{2}{white}{white}
+
+\begin{tabular}{| c | p{1.8cm} | p{1.8cm} | c | c | p{3.4cm} |}
+\hline \rowcolor{gray} \textbf{\color{white}Version} & \textbf{\color{white}Autor} & \textbf{\color{white}QS} & \textbf{\color{white}Datum} & \textbf{\color{white}Status} & \textbf{\color{white}Kommentare} \\ 
+ \hline \hline
+ 0.1 & Kacper Urbaniec && 11.10.2018 & \draft & Grundaufbau \& Formatierung der Machbarkeitsstudie\\
+ \hline  
+ 0.2 & Martin Wustinger && 11.10.2018 & \draft & Voruntersuchungen, Produktfunktionen, Projektorganisation, Projektplanung\\
+ \hline  
+  0.3 & Kacper Urbaniec && 11.10.2018 & \draft & Formatierung, Produktfunktionen(Kartenleser)\\
+ \hline  
+  0.4 & Kacper Urbaniec && 12.10.2018 & \draft & Soll-Zustand\\
+ \hline  
+  0.5 & Martin Wustinger && 16.10.2018 & \draft & Produktfunktionen angepasst an das Feedback des Lastenhefts\\
+ \hline  
+ 0.6 & Kacper Urbaniec && 03.11.2018 & \draft & Allgemeine Korrekturen in Bezug auf Formatierung und Sprache\\
+ \hline
+ 0.7 & Manuel Kisser &  Kacper Urbaniec& 04.11.2018 & \draft & Technische-, Wirtschaftliche Machbarkeit, Activitydiagramm, NWA\\
+ \hline  
+ 0.8 & Kacper Urbaniec && 04.11.2018 & \draft & Management Summary\\
+ \hline
+ 1.0 & Kacper Urbaniec &&04.11.2018& \abgabe &Endversion\\
+ \hline
+\end{tabular}
+\end{center}
+
+\clearpage
+{ % Wir wollen ja kein blaues Inhaltsverzeichnis :), im blue da ba dee
+  \hypersetup{linkcolor=black}
+  {\small\tableofcontents}
+} 
+\clearpage
+\include{_machbarkeitsstudie}
+\end{document}

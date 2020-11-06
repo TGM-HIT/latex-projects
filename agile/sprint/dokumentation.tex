@@ -1,27 +1,28 @@
 % rubber: set program xelatex
 \documentclass[alpha]{tile-sprint} % Option path/to/src may be required!
 
+% Document
 \title{Sprint x}
-\subtitle{Dokumentation}
-\author{Max Mustermann, Minni Musterfrau}
-
+\release{Alpha}
 % Sprint
 \sprint{Sprint x}
 \sprintstart{dd. Month yyyy}
 \sprintend{dd. Month yyyy}
-
-% Project
-\release{Alpha}
-
 % TILE Article
-\creationname{Max Mustermann} 		% Optional
-\creationdate{dd.mm.yyyy} 			% Optional
-\validationname{Max Mustermann}	% Optional
-\validationdate{dd.mm.yyyy} 		% Optional
-\approvedname{Max Mustermann} 		% Optional
-\approveddate{dd.mm.yyyy}			% Optional
+\creationname{Max Mustermann}   % Optional
+\creationdate{dd.mm.yyyy}       % Optional
+\validationname{Max Mustermann} % Optional
+\validationdate{dd.mm.yyyy}     % Optional
+\approvedname{Max Mustermann}   % Optional
+\approveddate{dd.mm.yyyy}       % Optional
+% All Info from above will be overwritten with config file if present
+\IfFileExists{conf.tex}{\input{conf.tex}}{}
+
+\author{Max Mustermann, Minni Musterfrau}
+\subtitle{Dokumentation}
+
 \version{x.x.x}
-\filepath{presets/sprint/tile-sprint-x-dokumentation.tex}
+\filepath{presets/sprint/sprint-x-dokumentation.pdf}
 
 \begin{document}
 

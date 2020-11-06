@@ -1,24 +1,29 @@
 % rubber: set program xelatex
 \documentclass[alpha, signed]{tile-sprint} % Option path/to/src may be required!
+
 % Document
 \title{Sprint x}
-\subtitle{Abnahme}							% Optional
-\author{Max Mustermann, Minni Musterfrau}
+\release{Alpha}
 % Sprint
-\sprint{Sprint x}							% Sprint name
-\sprintstart{dd. Month yyyy}				% Date the sprint started
-\sprintend{dd. Month yyyy}					% Date the sprint ends
-% Project
-\release{Alpha}								% Current product release
+\sprint{Sprint x}
+\sprintstart{dd. Month yyyy}
+\sprintend{dd. Month yyyy}
 % TILE Article
-\creationname{Max Mustermann} 				% Creator of this document 			- Optional
-\creationdate{dd.mm.yyyy} 					% Date this document was created 	- Optional
-\validationname{Max Mustermann}				% Validator of this document 		- Optional
-\validationdate{dd.mm.yyyy} 				% Date this document was validated	- Optional
-\approvedname{Max Mustermann} 				% Approver of this document			- Optional
-\approveddate{dd.mm.yyyy}					% Date this document was approved	- Optional
-\version{x.x.x}								% Version of this document
-\filepath{presets/sprint/tile-sprint-x-abnahme.pdf}	% Git path to this document
+\creationname{Max Mustermann}   % Optional
+\creationdate{dd.mm.yyyy}       % Optional
+\validationname{Max Mustermann} % Optional
+\validationdate{dd.mm.yyyy}     % Optional
+\approvedname{Max Mustermann}   % Optional
+\approveddate{dd.mm.yyyy}       % Optional
+% All Info from above will be overwritten with config file if present
+\IfFileExists{conf.tex}{\input{conf.tex}}{}
+
+\author{Max Mustermann, Minni Musterfrau}
+\subtitle{Abnahme}
+
+\version{x.x.x}
+\filepath{presets/sprint/sprint-x-abnahme.pdf}
+
 
 \begin{document}
 \begin{changelog}

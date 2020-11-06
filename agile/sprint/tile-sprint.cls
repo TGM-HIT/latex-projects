@@ -79,7 +79,3 @@
     \end{center}
 }
 
-% = Setup
-% Load configuration
-% TODO: Copy to tile-article and pass execution
-\IfFileExists{conf.tex}{\input{conf.tex}}{}

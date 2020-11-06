@@ -178,7 +178,7 @@
 \newcommand\creationname[1]{\renewcommand\@creationname{#1}}
 % === Date of creation	                - Optional
 \newcommand\@creationdate{\@empty}
-\newcommand\creationdate[1]{\renewcommand\@creationdate{#1}}
+\renewcommand\creationdate[1]{\renewcommand\@creationdate{#1}}
 % === validators		                - Optional
 \newcommand\@validationname{\@empty}
 \newcommand\validationname[1]{\renewcommand\@validationname{#1}}

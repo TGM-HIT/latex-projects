@@ -1,21 +1,26 @@
 % rubber: set program xelatex
-\documentclass[alpha]{tile-sprint}
-\title{Sprint x}
-\subtitle{Retrospektive}
-\author{Max Mustermann, Minni Musterfrau}
-\sprint{TILE Sprint x}
+\documentclass[alpha,approved]{tile-sprint}
 
+% Document
+\title{Sprint x}
+\release{Alpha}
 % Sprint
+\sprint{TILE Sprint x}
 \sprintstart{dd. Month yyyy}
 \sprintend{dd. Month yyyy}
-
 % TILE Article
 \creationname{Max Mustermann} 		% Optional
-\creationdate{dd.mm.yyyy} 			% Optional
+\creationdate{dd.mm.yyyy} 		% Optional
 \validationname{Max Mustermann}		% Optional
 \validationdate{dd.mm.yyyy} 		% Optional
 \approvedname{Max Mustermann} 		% Optional
-\approveddate{dd.mm.yyyy}			% Optional
+\approveddate{dd.mm.yyyy}		% Optional
+% All Info from above will be overwritten with config file if present
+\IfFileExists{conf.tex}{\input{conf.tex}}{}
+
+\author{Max Mustermann, Minni Musterfrau}
+\subtitle{Retrospektive}
+
 \version{x.x.x}
 \filepath{presets/sprint/tile-sprint-x-retrospektive.pdf}
 
